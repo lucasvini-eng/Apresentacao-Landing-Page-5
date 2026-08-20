@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Óticas Ajane | Estilo, Visão e Sofisticação</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#C5A059',
+                            goldLight: '#E5C483',
+                            goldDark: '#9E7C38',
+                            dark: '#0D0F12',
+                            darkCard: '#15181E',
+                            darkSurface: '#1C2028',
+                            textMuted: '#94A3B8'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Customizations & Metallic Effects */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F5D78B 0%, #C5A059 50%, #9E7C38 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #D4AF37 0%, #C5A059 50%, #9E7C38 100%);
+        }
+        .gold-gradient-btn {
+            background: linear-gradient(135deg, #C5A059 0%, #E5C483 50%, #B88E31 100%);
+            transition: all 0.3s ease;
+        }
+        .gold-gradient-btn:hover {
+            background: linear-gradient(135deg, #E5C483 0%, #C5A059 50%, #9E7C38 100%);
+            box-shadow: 0 10px 25px -5px rgba(197, 160, 89, 0.4);
+        }
+        .gold-border {
+            border-color: rgba(197, 160, 89, 0.3);
+        }
+        .gold-border-hover:hover {
+            border-color: rgba(197, 160, 89, 0.8);
+        }
+        .glass-panel {
+            background: rgba(21, 24, 30, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0D0F12;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C5A059;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-brand-gold selection:text-brand-dark">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-brand-dark via-brand-darkCard to-brand-dark text-brand-goldLight text-xs py-2 px-4 text-center border-b border-brand-gold/20 font-medium tracking-wide">
+        <span class="inline-flex items-center gap-2">
+            <i class="fa-solid fa-sparkles text-brand-gold animate-pulse"></i>
+            <span><strong>Oferta Especial do Mês:</strong> Na compra do óculos completo, seu Exame de Vista é por nossa conta!</span>
+            <a href="#agendamento" class="underline hover:text-white transition-colors ml-2 font-bold">Aproveitar Agora</a>
+        </span>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-40 glass-panel border-b border-brand-gold/20 transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <!-- Custom SVG Logo representing attached design -->
+                    <div class="relative w-12 h-12 rounded-full bg-brand-gold/10 border border-brand-gold/40 flex items-center justify-center p-2 group-hover:scale-105 transition-transform">
+                        <div class="w-full h-full rounded-full bg-brand-gold flex items-center justify-center shadow-lg shadow-brand-gold/20">
+                            <div class="relative flex items-center justify-center">
+                                <!-- Glasses Icon -->
+                                <svg class="w-7 h-7 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path d="M2 12s3-4 10-4 10 4 10 4-3 4-10 4-10-4-10-4z" class="opacity-0"></path>
+                                    <circle cx="6" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <circle cx="18" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <path d="M10 12h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-[10px] tracking-[0.25em] text-brand-gold uppercase font-semibold">Óticas</span>
+                        <span class="font-serif text-2xl font-bold tracking-wider text-white gold-gradient-text">AJANE</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu Links -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#armacoes" class="text-sm font-medium text-slate-200 hover:text-brand-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-gold hover:after:w-full after:transition-all">Armações</a>
+                    <a href="#oculos-de-sol" class="text-sm font-medium text-slate-200 hover:text-brand-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-gold hover:after:w-full after:transition-all">Óculos de Sol</a>
+                    <a href="#lentes" class="text-sm font-medium text-slate-200 hover:text-brand-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-gold hover:after:w-full after:transition-all">Lentes de Contato</a>
+                    <a href="#servicos" class="text-sm font-medium text-slate-200 hover:text-brand-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-gold hover:after:w-full after:transition-all">Serviços VIP</a>
+                    <a href="#contatos" class="text-sm font-medium text-slate-200 hover:text-brand-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-brand-gold hover:after:w-full after:transition-all">Contatos</a>
+                </nav>
+
+                <!-- Action Buttons: Cart & WhatsApp CTA -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <!-- Cart Button Trigger -->
+                    <button id="cartBtn" class="relative p-2.5 rounded-full bg-brand-darkSurface border border-brand-gold/30 text-brand-gold hover:bg-brand-gold/10 transition-colors" title="Ver Carrinho">
+                        <i class="fa-solid fa-bag-shopping text-lg"></i>
+                        <span id="cartCount" class="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white font-bold text-xs rounded-full flex items-center justify-center border-2 border-brand-dark hidden">0</span>
+                    </button>
+
+                    <a href="https://wa.me/5582999999999?text=Ol%C3%A1!%20Gostaria%20de%20atendimento%20na%20%C3%93ticas%20Ajane." target="_blank" class="gold-gradient-btn text-brand-dark font-bold text-sm px-5 py-2.5 rounded-full flex items-center gap-2 shadow-lg">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Falar com Consultor</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu & Cart Button Toggle -->
+                <div class="flex items-center gap-3 md:hidden">
+                    <button id="cartBtnMobile" class="relative p-2 rounded-lg bg-brand-darkSurface border border-brand-gold/30 text-brand-gold">
+                        <i class="fa-solid fa-bag-shopping text-lg"></i>
+                        <span id="cartCountMobile" class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white font-bold text-[10px] rounded-full flex items-center justify-center hidden">0</span>
+                    </button>
+
+                    <button id="mobileMenuBtn" class="p-2 text-slate-300 hover:text-brand-gold focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl" id="menuIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden glass-panel border-t border-brand-gold/20 px-4 pt-3 pb-6 space-y-3">
+            <a href="#armacoes" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-brand-gold/10 hover:text-brand-gold">Armações</a>
+            <a href="#oculos-de-sol" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-brand-gold/10 hover:text-brand-gold">Óculos de Sol</a>
+            <a href="#lentes" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-brand-gold/10 hover:text-brand-gold">Lentes de Contato</a>
+            <a href="#servicos" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-brand-gold/10 hover:text-brand-gold">Serviços VIP</a>
+            <a href="#contatos" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-brand-gold/10 hover:text-brand-gold">Contatos & Localização</a>
+            <div class="pt-2">
+                <a href="https://wa.me/5582999999999?text=Ol%C3%A1!%20Gostaria%20de%20atendimento%20na%20%C3%93ticas%20Ajane." target="_blank" class="gold-gradient-btn w-full text-brand-dark font-bold text-center py-3 rounded-xl flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Atendimento WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO / PROMOTIONAL BANNER SECTION -->
+    <section class="relative overflow-hidden pt-8 pb-16 md:py-24 bg-gradient-to-b from-brand-dark via-brand-darkCard to-brand-dark">
+        <!-- Ambient Glow Effects -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-brand-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-gold/10 border border-brand-gold/30 text-brand-gold text-xs sm:text-sm font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-crown text-brand-gold"></i>
+                        <span>Coleção Exclusive 2026</span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.15]">
+                        Sua visão com a <span class="gold-gradient-text block sm:inline">elegância</span> que você merece.
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Na <strong>Óticas Ajane</strong>, unimos saúde visual de precisão, tecnologia de lentes de ponta e consultoria de imagem personalizada para realçar sua melhor versão.
+                    </p>
+
+                    <!-- Main Banner Offers Highlight Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 max-w-xl mx-auto lg:mx-0">
+                        <div class="bg-brand-darkSurface/90 p-3.5 rounded-xl border border-brand-gold/20 text-center">
+                            <span class="block text-2xl font-bold text-brand-gold">Até 50%</span>
+                            <span class="text-xs text-slate-400 font-medium">Em Armações Select</span>
+                        </div>
+                        <div class="bg-brand-darkSurface/90 p-3.5 rounded-xl border border-brand-gold/20 text-center">
+                            <span class="block text-2xl font-bold text-brand-gold">Exame FREE</span>
+                            <span class="text-xs text-slate-400 font-medium">Na compra do Óculos</span>
+                        </div>
+                        <div class="col-span-2 sm:col-span-1 bg-brand-darkSurface/90 p-3.5 rounded-xl border border-brand-gold/20 text-center">
+                            <span class="block text-2xl font-bold text-brand-gold">10x Sem Juros</span>
+                            <span class="text-xs text-slate-400 font-medium">No Cartão de Crédito</span>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#agendamento" class="gold-gradient-btn w-full sm:w-auto px-8 py-4 rounded-xl text-brand-dark font-bold text-base shadow-xl flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-calendar-check text-lg"></i>
+                            <span>Agendar Exame Grátis</span>
+                        </a>
+                        <a href="#produtos" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-darkSurface border border-brand-gold/40 text-slate-200 hover:text-brand-gold hover:border-brand-gold font-semibold text-base transition-all flex items-center justify-center gap-2">
+                            <span>Ver Armações</span>
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+
+                    <!-- Trust indicators -->
+                    <div class="pt-4 flex items-center justify-center lg:justify-start gap-6 text-slate-400 text-xs sm:text-sm">
+                        <span class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-brand-gold"></i> Lentes Digitais
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-brand-gold"></i> Garantia Total
+                        </span>
+                        <span class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-brand-gold"></i> +15 Mil Clientes
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Right Visual Banner Image Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Golden Glow Rim -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-goldDark rounded-3xl blur opacity-30 animate-pulse"></div>
+                        
+                        <div class="relative bg-brand-darkCard rounded-3xl overflow-hidden border border-brand-gold/30 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=1000&auto=format&fit=crop" 
+                                 alt="Óculos de Sol Luxury Óticas Ajane" 
+                                 class="w-full h-[420px] object-cover object-center transform hover:scale-105 transition-transform duration-700"
+                                 onerror="this.src='https://placehold.co/600x800/15181E/C5A059?text=Oticas+Ajane'">
+                            
+                            <!-- Offer Tag overlay -->
+                            <div class="absolute bottom-4 left-4 right-4 glass-panel p-4 rounded-2xl flex items-center justify-between border border-brand-gold/40">
+                                <div>
+                                    <span class="text-xs uppercase font-bold tracking-wider text-brand-gold">Destaque da Semana</span>
+                                    <h4 class="text-white font-serif font-bold text-lg">Coleção Ajane Gold Edition</h4>
+                                </div>
+                                <span class="bg-brand-gold text-brand-dark font-black text-xs px-3 py-1.5 rounded-full uppercase">Novo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="servicos" class="py-20 bg-brand-dark font-sans relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-brand-gold font-semibold text-xs sm:text-sm uppercase tracking-[0.2em]">Excelência & Cuidado Visual</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Nossos Serviços Exclusivos</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent mx-auto"></div>
+                <p class="text-slate-400 text-sm sm:text-base pt-2">
+                    Proporcionamos um atendimento completo, focado no seu conforto visual e na expressão do seu estilo pessoal.
+                </p>
+            </div>
+
+            <!-- Grid of required 5 Services -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- 1. ATENDIMENTO POWER 🚀 -->
+                <div class="bg-brand-darkCard hover:bg-brand-darkSurface p-8 rounded-2xl border gold-border gold-border-hover transition-all duration-300 group flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+                            🚀
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white group-hover:text-brand-gold transition-colors">
+                            ATENDIMENTO POWER
+                        </h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Agilidade e prioridade máxima! Atendimento personalizado e dinâmico, ideal para quem precisa de solução rápida, escolha inteligente de lentes e entrega em tempo recorde.
+                        </p>
+                    </div>
+                    <div class="pt-6">
+                        <button onclick="requestService('ATENDIMENTO POWER')" class="w-full py-3 rounded-xl bg-brand-gold/10 hover:bg-brand-gold hover:text-brand-dark text-brand-gold font-bold text-sm transition-all border border-brand-gold/30 flex items-center justify-center gap-2">
+                            <span>Solicitar Atendimento</span>
+                            <i class="fa-solid fa-bolt text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. CONSULTORIA DE IMAGEM 👩‍💼 -->
+                <div class="bg-brand-darkCard hover:bg-brand-darkSurface p-8 rounded-2xl border gold-border gold-border-hover transition-all duration-300 group flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+                            👩‍💼
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white group-hover:text-brand-gold transition-colors">
+                            CONSULTORIA DE IMAGEM
+                        </h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Análise do formato do seu rosto, tom de pele e estilo de vida. Descubra qual armação valoriza suas feições e transmite a imagem de sucesso que você busca.
+                        </p>
+                    </div>
+                    <div class="pt-6">
+                        <button onclick="requestService('CONSULTORIA DE IMAGEM')" class="w-full py-3 rounded-xl bg-brand-gold/10 hover:bg-brand-gold hover:text-brand-dark text-brand-gold font-bold text-sm transition-all border border-brand-gold/30 flex items-center justify-center gap-2">
+                            <span>Agendar Consultoria</span>
+                            <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3. AGENDAR EXAME DE VISTA 🩺 -->
+                <div class="bg-brand-darkCard hover:bg-brand-darkSurface p-8 rounded-2xl border gold-border gold-border-hover transition-all duration-300 group flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute -right-6 -top-6 w-24 h-24 bg-brand-gold/10 rounded-full blur-xl pointer-events-none"></div>
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+                            🩺
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <h3 class="font-serif text-xl font-bold text-white group-hover:text-brand-gold transition-colors">
+                                EXAME DE VISTA
+                            </h3>
+                            <span class="bg-brand-gold text-brand-dark font-extrabold text-[10px] px-2 py-0.5 rounded-full uppercase">Popular</span>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Avaliação refrativa completa com optometristas experientes e equipamentos computadorizados de última geração. Garantia de grau exato.
+                        </p>
+                    </div>
+                    <div class="pt-6">
+                        <a href="#agendamento" class="w-full py-3 rounded-xl gold-gradient-btn text-brand-dark font-bold text-sm transition-all flex items-center justify-center gap-2">
+                            <span>Agendar Agora</span>
+                            <i class="fa-solid fa-calendar-days text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. CONSERTO E MANUTENÇÃO 👨‍🔧 -->
+                <div class="bg-brand-darkCard hover:bg-brand-darkSurface p-8 rounded-2xl border gold-border gold-border-hover transition-all duration-300 group flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+                            👨‍🔧
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white group-hover:text-brand-gold transition-colors">
+                            CONSERTO E MANUTENÇÃO
+                        </h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Ajuste de hastes, troca de plaquetas, solda e higienização ultra-sônica do seu óculo favorito. Deixamos sua armação como nova!
+                        </p>
+                    </div>
+                    <div class="pt-6">
+                        <button onclick="requestService('CONSERTO E MANUTENÇÃO')" class="w-full py-3 rounded-xl bg-brand-gold/10 hover:bg-brand-gold hover:text-brand-dark text-brand-gold font-bold text-sm transition-all border border-brand-gold/30 flex items-center justify-center gap-2">
+                            <span>Solicitar Reparo</span>
+                            <i class="fa-solid fa-screwdriver-wrench text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 5. QUERO ENCONTRAR A LOJA 🏢 -->
+                <div class="bg-brand-darkCard hover:bg-brand-darkSurface p-8 rounded-2xl border gold-border gold-border-hover transition-all duration-300 group flex flex-col justify-between md:col-span-2 lg:col-span-2">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-brand-gold/10 border border-brand-gold/30 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+                            🏢
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white group-hover:text-brand-gold transition-colors">
+                            QUERO ENCONTRAR A LOJA
+                        </h3>
+                        <p class="text-slate-300 text-sm leading-relaxed max-w-xl">
+                            Venha experimentar nossas coleções em um ambiente sofisticado e acolhedor com café gourmet e estacionamento privativo. Estamos prontos para receber você!
+                        </p>
+                    </div>
+                    <div class="pt-6 flex flex-col sm:flex-row gap-3">
+                        <a href="#localizacao" class="px-6 py-3 rounded-xl bg-brand-gold text-brand-dark font-bold text-sm hover:bg-brand-goldLight transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Ver Endereço no Mapa</span>
+                        </a>
+                        <a href="https://wa.me/5582999999999?text=Ol%C3%A1!%20Como%20fa%C3%A7o%20para%20chegar%20na%20loja%20%C3%93ticas%20Ajane%3F" target="_blank" class="px-6 py-3 rounded-xl bg-brand-darkSurface border border-brand-gold/30 text-slate-200 hover:text-brand-gold font-semibold text-sm transition-all flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Enviar Rota no WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION (With Filter and Add to Cart) -->
+    <section id="produtos" class="py-20 bg-brand-darkCard relative border-t border-b border-brand-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <span class="text-brand-gold font-semibold text-xs sm:text-sm uppercase tracking-[0.2em]">Catálogo Selecionado</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Nossos Produtos em Destaque</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Monte seu pedido no carrinho e envie diretamente para o nosso atendimento no WhatsApp!</p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12" id="productFilters">
+                <button onclick="filterProducts('all')" class="filter-btn active px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-brand-gold text-brand-dark transition-all">Todos</button>
+                <button onclick="filterProducts('armacoes')" id="armacoes" class="filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-brand-darkSurface text-slate-300 border border-brand-gold/20 hover:border-brand-gold transition-all">Armações de Grau</button>
+                <button onclick="filterProducts('sol')" id="oculos-de-sol" class="filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-brand-darkSurface text-slate-300 border border-brand-gold/20 hover:border-brand-gold transition-all">Óculos de Sol</button>
+                <button onclick="filterProducts('lentes')" id="lentes" class="filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-brand-darkSurface text-slate-300 border border-brand-gold/20 hover:border-brand-gold transition-all">Lentes de Contato</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="productsGrid">
+                
+                <!-- Product 1: Armação Luxury Gold -->
+                <div class="product-card bg-brand-dark p-4 rounded-2xl border gold-border hover:border-brand-gold transition-all duration-300 flex flex-col justify-between" data-category="armacoes">
+                    <div>
+                        <div class="relative rounded-xl overflow-hidden mb-4 bg-brand-darkSurface aspect-square">
+                            <span class="absolute top-3 left-3 bg-red-600 text-white font-bold text-[10px] px-2.5 py-1 rounded-full z-10 uppercase tracking-wider">-30% OFF</span>
+                            <img src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?q=80&w=600&auto=format&fit=crop" 
+                                 alt="Armação Titanium Ajane" 
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/400x400/15181E/C5A059?text=Armacao+Gold'">
+                        </div>
+                        <span class="text-[11px] font-semibold text-brand-gold uppercase tracking-wider">Armações de Grau</span>
+                        <h3 class="font-serif font-bold text-lg text-white mt-1">Titanium Luxe Gold</h3>
+                        <p class="text-slate-400 text-xs mt-1">Titanium ultraleve de alta durabilidade com acabamento dourado satinado.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
+                        <div>
+                            <span class="text-slate-500 line-through text-xs block">R$ 599,00</span>
+                            <span class="text-brand-gold font-bold text-lg">R$ 419,30</span>
+                        </div>
+                        <button onclick="addToCart(1, 'Titanium Luxe Gold', 419.30, 'https://images.unsplash.com/photo-1591076482161-42ce6da69f67?q=80&w=200')" class="p-3 rounded-xl bg-brand-gold text-brand-dark hover:bg-brand-goldLight transition-colors font-bold flex items-center justify-center gap-1 text-xs">
+                            <i class="fa-solid fa-cart-plus text-sm"></i>
+                            <span>Adicionar</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2: Óculos de Sol Ajane Aviador -->
+                <div class="product-card bg-brand-dark p-4 rounded-2xl border gold-border hover:border-brand-gold transition-all duration-300 flex flex-col justify-between" data-category="sol">
+                    <div>
+                        <div class="relative rounded-xl overflow-hidden mb-4 bg-brand-darkSurface aspect-square">
+                            <span class="absolute top-3 left-3 bg-brand-gold text-brand-dark font-bold text-[10px] px-2.5 py-1 rounded-full z-10 uppercase tracking-wider">Lançamento</span>
+                            <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=600&auto=format&fit=crop" 
+                                 alt="Óculos de Sol Aviador Black" 
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/400x400/15181E/C5A059?text=Oculos+Sol'">
+                        </div>
+                        <span class="text-[11px] font-semibold text-brand-gold uppercase tracking-wider">Óculos de Sol</span>
+                        <h3 class="font-serif font-bold text-lg text-white mt-1">Solar Aviador Ajane Velvet</h3>
+                        <p class="text-slate-400 text-xs mt-1">Lentes polarizadas com proteção UV400 total e armação anatômica.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
+                        <div>
+                            <span class="text-slate-500 line-through text-xs block">R$ 480,00</span>
+                            <span class="text-brand-gold font-bold text-lg">R$ 349,00</span>
+                        </div>
+                        <button onclick="addToCart(2, 'Solar Aviador Ajane Velvet', 349.00, 'https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=200')" class="p-3 rounded-xl bg-brand-gold text-brand-dark hover:bg-brand-goldLight transition-colors font-bold flex items-center justify-center gap-1 text-xs">
+                            <i class="fa-solid fa-cart-plus text-sm"></i>
+                            <span>Adicionar</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3: Armação Acetao Gatinho -->
+                <div class="product-card bg-brand-dark p-4 rounded-2xl border gold-border hover:border-brand-gold transition-all duration-300 flex flex-col justify-between" data-category="armacoes">
+                    <div>
+                        <div class="relative rounded-xl overflow-hidden mb-4 bg-brand-darkSurface aspect-square">
+                            <img src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?q=80&w=600&auto=format&fit=crop" 
+                                 alt="Armação Acetato Cat-Eye" 
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/400x400/15181E/C5A059?text=Acetato+CatEye'">
+                        </div>
+                        <span class="text-[11px] font-semibold text-brand-gold uppercase tracking-wider">Armações de Grau</span>
+                        <h3 class="font-serif font-bold text-lg text-white mt-1">Cat-Eye Glamour Tortoise</h3>
+                        <p class="text-slate-400 text-xs mt-1">Design gatinho marcante em acetato italiano com detalhes metálicos dourados.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
+                        <div>
+                            <span class="text-slate-500 line-through text-xs block">R$ 520,00</span>
+                            <span class="text-brand-gold font-bold text-lg">R$ 389,90</span>
+                        </div>
+                        <button onclick="addToCart(3, 'Cat-Eye Glamour Tortoise', 389.90, 'https://images.unsplash.com/photo-1574258495973-f010dfbb5371?q=80&w=200')" class="p-3 rounded-xl bg-brand-gold text-brand-dark hover:bg-brand-goldLight transition-colors font-bold flex items-center justify-center gap-1 text-xs">
+                            <i class="fa-solid fa-cart-plus text-sm"></i>
+                            <span>Adicionar</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4: Lentes de Contato Hidrofilicas Premium -->
+                <div class="product-card bg-brand-dark p-4 rounded-2xl border gold-border hover:border-brand-gold transition-all duration-300 flex flex-col justify-between" data-category="lentes">
+                    <div>
+                        <div class="relative rounded-xl overflow-hidden mb-4 bg-brand-darkSurface aspect-square">
+                            <span class="absolute top-3 left-3 bg-emerald-600 text-white font-bold text-[10px] px-2.5 py-1 rounded-full z-10 uppercase tracking-wider">Alta Oxigenação</span>
+                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=600&auto=format&fit=crop" 
+                                 alt="Lentes de Contato Premium" 
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/400x400/15181E/C5A059?text=Lentes+Contato'">
+                        </div>
+                        <span class="text-[11px] font-semibold text-brand-gold uppercase tracking-wider">Lentes de Contato</span>
+                        <h3 class="font-serif font-bold text-lg text-white mt-1">Lentes Acuvue Oasys (Caixa)</h3>
+                        <p class="text-slate-400 text-xs mt-1">Lentes hidrogel de silicone com tecnologia HYDRACLEAR para hidratação prolongada.</p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
+                        <div>
+                            <span class="text-brand-gold font-bold text-lg">R$ 189,00</span>
+                        </div>
+                        <button onclick="addToCart(4, 'Lentes Acuvue Oasys (Caixa)', 189.00, 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=200')" class="p-3 rounded-xl bg-brand-gold text-brand-dark hover:bg-brand-goldLight transition-colors font-bold flex items-center justify-center gap-1 text-xs">
+                            <i class="fa-solid fa-cart-plus text-sm"></i>
+                            <span>Adicionar</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LEAD CAPTURE FORM SECTION -->
+    <section id="agendamento" class="py-20 bg-gradient-to-b from-brand-dark to-brand-darkCard relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute -right-32 bottom-0 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-brand-darkCard rounded-3xl p-6 sm:p-10 border border-brand-gold/40 shadow-2xl">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <div class="lg:col-span-5 space-y-4">
+                        <span class="text-brand-gold font-semibold text-xs uppercase tracking-widest">Agendamento Online</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white leading-tight">
+                            Garanta seu atendimento exclusivo
+                        </h2>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Preencha seus dados para agendar seu exame de vista ou consultoria. Nossas especialistas entrarão em contato imediatamente pelo WhatsApp para confirmar o melhor horário!
+                        </p>
+
+                        <div class="space-y-3 pt-2">
+                            <div class="flex items-center gap-3 text-slate-300 text-sm">
+                                <div class="w-8 h-8 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold">
+                                    <i class="fa-solid fa-check text-xs"></i>
+                                </div>
+                                <span>Sem filas de espera</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-300 text-sm">
+                                <div class="w-8 h-8 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold">
+                                    <i class="fa-solid fa-check text-xs"></i>
+                                </div>
+                                <span>Atendimento com Optometrista Especialista</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-300 text-sm">
+                                <div class="w-8 h-8 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold">
+                                    <i class="fa-solid fa-check text-xs"></i>
+                                </div>
+                                <span>Teste de lentes em tempo real</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Form -->
+                    <div class="lg:col-span-7 bg-brand-dark p-6 sm:p-8 rounded-2xl border gold-border">
+                        <form id="leadForm" onsubmit="submitLeadForm(event)" class="space-y-4">
+                            
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-brand-gold mb-1">Seu Nome Completo *</label>
+                                <input type="text" id="leadName" required placeholder="Ex: Maria Silva" 
+                                       class="w-full bg-brand-darkSurface border border-brand-gold/30 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-gold text-sm">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-brand-gold mb-1">WhatsApp / Telefone *</label>
+                                    <input type="tel" id="leadPhone" required placeholder="(82) 99999-9999" 
+                                           class="w-full bg-brand-darkSurface border border-brand-gold/30 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-gold text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-brand-gold mb-1">Serviço Desejado *</label>
+                                    <select id="leadService" required class="w-full bg-brand-darkSurface border border-brand-gold/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-gold text-sm">
+                                        <option value="AGENDAR EXAME DE VISTA 🩺">AGENDAR EXAME DE VISTA 🩺</option>
+                                        <option value="ATENDIMENTO POWER 🚀">ATENDIMENTO POWER 🚀</option>
+                                        <option value="CONSULTORIA DE IMAGEM 👩‍💼">CONSULTORIA DE IMAGEM 👩‍💼</option>
+                                        <option value="CONSERTO E MANUTENÇÃO 👨‍🔧">CONSERTO E MANUTENÇÃO 👨‍🔧</option>
+                                        <option value="QUERO ENCONTRAR A LOJA 🏢">QUERO ENCONTRAR A LOJA 🏢</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-brand-gold mb-1">Dia Preferencial</label>
+                                    <input type="date" id="leadDate" class="w-full bg-brand-darkSurface border border-brand-gold/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-gold text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-brand-gold mb-1">Horário Preferencial</label>
+                                    <select id="leadTime" class="w-full bg-brand-darkSurface border border-brand-gold/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-gold text-sm">
+                                        <option value="Manhã (09:00 - 12:00)">Manhã (09:00 - 12:00)</option>
+                                        <option value="Tarde (13:00 - 17:00)">Tarde (13:00 - 17:00)</option>
+                                        <option value="Noite (17:00 - 19:00)">Noite (17:00 - 19:00)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-brand-gold mb-1">Observações / Preferência de Armação</label>
+                                <textarea id="leadMessage" rows="2" placeholder="Descreva brevemente o que procura..." class="w-full bg-brand-darkSurface border border-brand-gold/30 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-brand-gold text-sm resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="gold-gradient-btn w-full py-4 rounded-xl text-brand-dark font-bold text-base shadow-xl flex items-center justify-center gap-2 mt-2">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                                <span>Enviar Agendamento via WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION & GOOGLE MAPS SECTION -->
+    <section id="localizacao" class="py-20 bg-brand-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <span class="text-brand-gold font-semibold text-xs uppercase tracking-[0.2em]">Onde Estamos</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Venha Conhecer Nossa Loja</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Localização privilegiada com fácil acesso e ambiente aconchegante.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                
+                <!-- Contact & Info Card -->
+                <div class="lg:col-span-5 bg-brand-darkCard p-8 rounded-3xl border gold-border flex flex-col justify-between space-y-6">
+                    <div class="space-y-6">
+                        
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold text-xl border border-brand-gold/40">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-lg text-white">Endereço Principal</h4>
+                                <p class="text-slate-300 text-sm">Av. Doutor Antônio Gouveia, 1000 - Pajuçara</p>
+                                <p class="text-slate-400 text-xs">Maceió - AL, CEP 57030-170</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold text-xl border border-brand-gold/40">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-lg text-white">Horário de Funcionamento</h4>
+                                <p class="text-slate-300 text-sm">Segunda a Sexta: 08:30h às 18:30h</p>
+                                <p class="text-slate-300 text-sm">Sábado: 08:30h às 13:00h</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold text-xl border border-brand-gold/40">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-lg text-white">Telefone & WhatsApp</h4>
+                                <p class="text-slate-300 text-sm">(82) 99999-9999 / (82) 3333-3333</p>
+                                <p class="text-slate-400 text-xs">Atendimento em tempo real</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-800">
+                        <a href="https://maps.google.com" target="_blank" class="gold-gradient-btn w-full py-3.5 rounded-xl text-brand-dark font-bold text-center block text-sm">
+                            <i class="fa-solid fa-route mr-2"></i> Abrir no Google Maps Navegador
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed Container -->
+                <div class="lg:col-span-7 bg-brand-darkCard rounded-3xl overflow-hidden border gold-border min-h-[350px]">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3933.1534015690333!2d-35.7118!3d-9.6672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x70145831e780000%3A0x1!2sPaju%C3%A7ara%2C%20Macei%C3%B3%20-%20State%20of%20Alagoas!5e0!3m2!1sen!2sbr!4v1700000000000!5m2!1sen!2sbr" 
+                        class="w-full h-full min-h-[400px] border-0" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer id="contatos" class="bg-brand-darkCard border-t border-brand-gold/30 pt-16 pb-12 text-slate-400 font-sans">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-gold flex items-center justify-center text-brand-dark font-bold shadow-md">
+                            <i class="fa-solid fa-glasses text-lg"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[9px] tracking-[0.2em] text-brand-gold uppercase font-bold">Óticas</span>
+                            <span class="font-serif text-xl font-bold tracking-wider text-white gold-gradient-text">AJANE</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Sua ótica de confiança. Qualidade visual, tecnologia de lentes internacionais e armações exclusivas para realçar seu olhar.
+                    </p>
+                    <!-- Social icons -->
+                    <div class="flex items-center space-x-3 pt-2">
+                        <a href="#" class="w-9 h-9 rounded-full bg-brand-darkSurface border border-brand-gold/30 text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition-all flex items-center justify-center">
+                            <i class="fa-brands fa-instagram text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-brand-darkSurface border border-brand-gold/30 text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition-all flex items-center justify-center">
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-brand-darkSurface border border-brand-gold/30 text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition-all flex items-center justify-center">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigation Links -->
+                <div class="space-y-3">
+                    <h4 class="font-serif text-white font-bold text-base tracking-wide">Navegação Rápida</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#armacoes" class="hover:text-brand-gold transition-colors">Armações de Grau</a></li>
+                        <li><a href="#oculos-de-sol" class="hover:text-brand-gold transition-colors">Óculos de Sol</a></li>
+                        <li><a href="#lentes" class="hover:text-brand-gold transition-colors">Lentes de Contato</a></li>
+                        <li><a href="#servicos" class="hover:text-brand-gold transition-colors">Serviços VIP</a></li>
+                        <li><a href="#agendamento" class="hover:text-brand-gold transition-colors">Agendamento de Exame</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Required Services List -->
+                <div class="space-y-3">
+                    <h4 class="font-serif text-white font-bold text-base tracking-wide">Nossos Serviços</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#servicos" class="hover:text-brand-gold transition-colors">🚀 Atendimento Power</a></li>
+                        <li><a href="#servicos" class="hover:text-brand-gold transition-colors">👩‍💼 Consultoria de Imagem</a></li>
+                        <li><a href="#agendamento" class="hover:text-brand-gold transition-colors">🩺 Agendar Exame de Vista</a></li>
+                        <li><a href="#servicos" class="hover:text-brand-gold transition-colors">👨‍🔧 Conserto e Manutenção</a></li>
+                        <li><a href="#localizacao" class="hover:text-brand-gold transition-colors">🏢 Encontrar a Loja</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contacts Summary -->
+                <div class="space-y-3">
+                    <h4 class="font-serif text-white font-bold text-base tracking-wide">Atendimento</h4>
+                    <p class="text-xs text-slate-300">Dúvidas ou agendamentos diretos?</p>
+                    <a href="https://wa.me/5582999999999?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es." target="_blank" class="inline-flex items-center gap-2 text-brand-gold text-xs font-bold hover:underline">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>(82) 99999-9999</span>
+                    </a>
+                    <p class="text-[11px] text-slate-500 pt-2">Atendimento de Segunda a Sábado em horário comercial.</p>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 Óticas Ajane. Todos os direitos reservados.</p>
+                <div class="flex items-center space-x-4 text-[11px]">
+                    <a href="#" class="hover:text-slate-400">Termos de Uso</a>
+                    <span>•</span>
+                    <a href="#" class="hover:text-slate-400">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/5582999999999?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20equipe%20da%20%C3%93ticas%20Ajane." 
+       target="_blank" 
+       class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 group">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <span class="absolute right-16 bg-slate-900 text-white text-xs px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg">
+            Falar no WhatsApp
+        </span>
+    </a>
+
+    <!-- SHOPPING CART SLIDE-OVER DRAWER -->
+    <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden hidden">
+        <!-- Backdrop -->
+        <div id="cartBackdrop" class="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity"></div>
+
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-brand-darkCard border-l border-brand-gold/30 text-slate-100 shadow-2xl flex flex-col justify-between">
+                
+                <!-- Drawer Header -->
+                <div class="p-6 border-b border-slate-800 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-bag-shopping text-brand-gold text-xl"></i>
+                        <h3 class="font-serif text-lg font-bold text-white">Seu Pedido</h3>
+                    </div>
+                    <button id="closeCartBtn" class="p-2 text-slate-400 hover:text-white">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Drawer Cart Items Body -->
+                <div id="cartItemsContainer" class="p-6 overflow-y-auto flex-1 space-y-4">
+                    <!-- Dynamic cart items rendered by JS -->
+                    <p class="text-center text-slate-500 text-sm py-12">Seu carrinho está vazio no momento.</p>
+                </div>
+
+                <!-- Drawer Footer Total & Checkout -->
+                <div class="p-6 border-t border-slate-800 bg-brand-dark space-y-4">
+                    <div class="flex items-center justify-between text-base">
+                        <span class="text-slate-400">Total Estimado:</span>
+                        <span id="cartTotal" class="font-serif font-bold text-xl text-brand-gold">R$ 0,00</span>
+                    </div>
+
+                    <p class="text-[11px] text-slate-500 leading-tight">
+                        Ao clicar abaixo, seu pedido será enviado pré-formatado diretamente para o WhatsApp das Óticas Ajane para confirmação de estoque e lentes.
+                    </p>
+
+                    <button id="checkoutBtn" onclick="checkoutWhatsApp()" class="gold-gradient-btn w-full py-4 rounded-xl text-brand-dark font-bold text-base flex items-center justify-center gap-2 shadow-lg">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Enviar Pedido pelo WhatsApp</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        let cart = [];
+
+        // Mobile Menu Toggle logic
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fa-solid fa-bars text-2xl';
+            } else {
+                menuIcon.className = 'fa-solid fa-xmark text-2xl';
+            }
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fa-solid fa-bars text-2xl';
+            });
+        });
+
+        // Cart Drawer Toggles
+        const cartBtn = document.getElementById('cartBtn');
+        const cartBtnMobile = document.getElementById('cartBtnMobile');
+        const closeCartBtn = document.getElementById('closeCartBtn');
+        const cartDrawer = document.getElementById('cartDrawer');
+        const cartBackdrop = document.getElementById('cartBackdrop');
+
+        function openCart() {
+            cartDrawer.classList.remove('hidden');
+        }
+
+        function closeCart() {
+            cartDrawer.classList.add('hidden');
+        }
+
+        cartBtn.addEventListener('click', openCart);
+        cartBtnMobile.addEventListener('click', openCart);
+        closeCartBtn.addEventListener('click', closeCart);
+        cartBackdrop.addEventListener('click', closeCart);
+
+        function addToCart(id, name, price, img) {
+            const existingIndex = cart.findIndex(item => item.id === id);
+            if (existingIndex > -1) {
+                cart[existingIndex].qty += 1;
+            } else {
+                cart.push({ id, name, price, img, qty: 1 });
+            }
+            updateCartUI();
+            openCart();
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            updateCartUI();
+        }
+
+        function changeQty(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if (item) {
+                item.qty += delta;
+                if (item.qty <= 0) {
+                    removeFromCart(id);
+                } else {
+                    updateCartUI();
+                }
+            }
+        }
+
+        function updateCartUI() {
+            const cartItemsContainer = document.getElementById('cartItemsContainer');
+            const cartCount = document.getElementById('cartCount');
+            const cartCountMobile = document.getElementById('cartCountMobile');
+            const cartTotal = document.getElementById('cartTotal');
+
+            const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+            // Update badge counters
+            if (totalItems > 0) {
+                cartCount.textContent = totalItems;
+                cartCount.classList.remove('hidden');
+                cartCountMobile.textContent = totalItems;
+                cartCountMobile.classList.remove('hidden');
+            } else {
+                cartCount.classList.add('hidden');
+                cartCountMobile.classList.add('hidden');
+            }
+
+            // Update total price text
+            cartTotal.textContent = `R$ ${totalPrice.toFixed(2).replace('.', ',')}`;
+
+            // Render list
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = `<p class="text-center text-slate-500 text-sm py-12">Seu carrinho está vazio no momento.</p>`;
+                return;
+            }
+
+            cartItemsContainer.innerHTML = cart.map(item => `
+                <div class="flex items-center justify-between p-3 bg-brand-darkSurface rounded-xl border border-brand-gold/20">
+                    <div class="flex items-center gap-3">
+                        <img src="${item.img}" alt="${item.name}" class="w-12 h-12 object-cover rounded-lg">
+                        <div>
+                            <h4 class="text-sm font-semibold text-white leading-tight">${item.name}</h4>
+                            <span class="text-xs text-brand-gold font-bold">R$ ${(item.price * item.qty).toFixed(2).replace('.', ',')}</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button onclick="changeQty(${item.id}, -1)" class="w-6 h-6 rounded bg-brand-dark text-slate-300 font-bold hover:text-brand-gold flex items-center justify-center text-xs">-</button>
+                        <span class="text-xs font-bold text-white px-1">${item.qty}</span>
+                        <button onclick="changeQty(${item.id}, 1)" class="w-6 h-6 rounded bg-brand-dark text-slate-300 font-bold hover:text-brand-gold flex items-center justify-center text-xs">+</button>
+                        <button onclick="removeFromCart(${item.id})" class="ml-2 text-slate-500 hover:text-red-400 text-xs">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Send Cart Order to WhatsApp
+        function checkoutWhatsApp() {
+            if (cart.length === 0) {
+                alert('Seu carrinho está vazio!');
+                return;
+            }
+
+            let message = "Ol%C3%A1!%20Gostaria%20de%20finalizar%20o%20meu%20pedido%20na%20%C3%93ticas%20Ajane%3A%0A%0A";
+            let totalPrice = 0;
+
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.qty;
+                totalPrice += itemTotal;
+                message += `${index + 1}.%20*${encodeURIComponent(item.name)}*%20x${item.qty}%20-%20R%24%20${itemTotal.toFixed(2).replace('.', ',')}%0A`;
+            });
+
+            message += `%0A*Total%20Estimado%3A%20R%24%20${totalPrice.toFixed(2).replace('.', ',')}*%0A%0AAguardo%20instru%C3%A7%C3%B5es%20de%20pagamento%20e%20op%C3%A7%C3%B5es%20de%20lente!`;
+
+            window.open(`https://wa.me/5582999999999?text=${message}`, '_blank');
+        }
+
+        function filterProducts(category) {
+            const cards = document.querySelectorAll('.product-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-gold', 'text-brand-dark');
+                btn.classList.add('bg-brand-darkSurface', 'text-slate-300', 'border', 'border-brand-gold/20');
+            });
+
+            // Activate current button
+            event.currentTarget.classList.remove('bg-brand-darkSurface', 'text-slate-300', 'border', 'border-brand-gold/20');
+            event.currentTarget.classList.add('bg-brand-gold', 'text-brand-dark');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Direct Service Trigger to Lead Form or WhatsApp
+        function requestService(serviceName) {
+            const serviceSelect = document.getElementById('leadService');
+            if (serviceSelect) {
+                for (let option of serviceSelect.options) {
+                    if (option.value.includes(serviceName)) {
+                        option.selected = true;
+                        break;
+                    }
+                }
+            }
+            const agendamentoSection = document.getElementById('agendamento');
+            agendamentoSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Lead Form WhatsApp Submission
+        function submitLeadForm(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('leadName').value;
+            const phone = document.getElementById('leadPhone').value;
+            const service = document.getElementById('leadService').value;
+            const date = document.getElementById('leadDate').value;
+            const time = document.getElementById('leadTime').value;
+            const notes = document.getElementById('leadMessage').value;
+
+            let msg = `Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20agendamento%20na%20%C3%93ticas%20Ajane%3A%0A%0A`;
+            msg += `👤%20*Nome%3A*%20${encodeURIComponent(name)}%0A`;
+            msg += `📱%20*Telefone%20/ WhatsApp%3A*%20${encodeURIComponent(phone)}%0A`;
+            msg += `📋%20*Servi%C3%A7o%3A*%20${encodeURIComponent(service)}%0A`;
+            if (date) msg += `📅%20*Data%20Preferencial%3A*%20${encodeURIComponent(date)}%0A`;
+            if (time) msg += `⏰%20*Hor%C3%A1rio%3A*%20${encodeURIComponent(time)}%0A`;
+            if (notes) msg += `💬%20*Observa%C3%A7%C3%B5es%3A*%20${encodeURIComponent(notes)}%0A`;
+
+            window.open(`https://wa.me/5582999999999?text=${msg}`, '_blank');
+        }
+    </script>
+</body>
+</html>
