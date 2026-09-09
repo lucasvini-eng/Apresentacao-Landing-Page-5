@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP Multimarcas — Carros seminovos e usados em Barueri</title>
+<meta name="description" content="VIP Multimarcas. Compra e venda de carros seminovos e usados em Barueri. Fale agora pelo WhatsApp.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="logo.png">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink:    '#0A0D13',
+          navy:   '#000000',
+          navy2:  '#000000',
+          steel:  '#8B93A3',
+          silver: '#C7CBD1',
+          gold:   '#C9A24B',
+          gold2:  '#E7C878',
+          bone:   '#F4F3EF',
+        },
+        fontFamily: {
+          display: ['Oswald','sans-serif'],
+          body: ['Manrope','sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Manrope', sans-serif; background:#0A0D13; }
+  h1,h2,h3,h4, .display { font-family: 'Oswald', sans-serif; letter-spacing: .01em; }
+
+  .bg-metal {
+    background: linear-gradient(180deg, #08090b 0%, #0A0D13 55%, #070911 100%);
+  }
+  .gold-line { background: linear-gradient(90deg, transparent, #C9A24B, transparent); }
+  .gold-text {
+    background: linear-gradient(180deg, #F1DDA0 0%, #C9A24B 55%, #9C7A2C 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .card-hover { transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease; }
+  .card-hover:hover { transform: translateY(-6px); box-shadow: 0 25px 50px -20px rgba(0,0,0,.6); border-color: rgba(201,162,75,.55); }
+
+  .brand-strip { animation: scroll-x 32s linear infinite; }
+  .brand-strip:hover { animation-play-state: paused; }
+  @keyframes scroll-x { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  .no-scrollbar::-webkit-scrollbar { display:none; }
+  .no-scrollbar { -ms-overflow-style:none; scrollbar-width:none; }
+
+  input:focus, select:focus, textarea:focus { outline: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .brand-strip { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  .divider-diag {
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  }
+
+  .whats-pulse::before {
+    content:'';
+    position:absolute; inset:0;
+    border-radius: 9999px;
+    background: #25D366;
+    opacity: .55;
+    animation: pulse-ring 2.2s cubic-bezier(0.2,0.6,0.4,1) infinite;
+  }
+  @keyframes pulse-ring {
+    0% { transform: scale(1); opacity:.5; }
+    100% { transform: scale(1.9); opacity:0; }
+  }
+</style>
+</head>
+
+<body class="bg-ink text-bone antialiased">
+
+<!-- ============ TOP BAR ============ -->
+<div class="hidden md:block bg-[#070911] border-b border-white/5 text-steel text-xs">
+  <div class="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
+    <p>Horário de atendimento: Seg a sexta – 9h às 18h &nbsp;|&nbsp; Sáb – 9h às 16h</p>
+    <div class="flex items-center gap-5">
+      <a href="https://www.instagram.com/vipmultimarcasss" target="_blank" rel="noopener" class="hover:text-gold2 transition-colors">@vipmultimarcasss</a>
+      <a href="https://wa.me/5582996402650?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20falar%20com%20a%20VIP%20Multimarcas." target="_blank" rel="noopener" class="hover:text-gold2 transition-colors">(82) 99640-2650</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER / NAV ============ -->
+<header id="topo" class="sticky top-0 z-50 bg-ink/90 backdrop-blur border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between h-20">
+
+      <a href="#topo" class="flex items-center gap-3 shrink-0">
+        <img src="logo.png" alt="VIP Multimarcas" class="h-14 w-auto">
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-9 text-sm font-semibold uppercase tracking-wide text-silver">
+        <a href="#estoque" class="hover:text-gold2 transition-colors">Estoque</a>
+        <a href="#venda" class="hover:text-gold2 transition-colors">Venda seu carro</a>
+        <a href="#financie" class="hover:text-gold2 transition-colors">Financie</a>
+        <a href="#sobre" class="hover:text-gold2 transition-colors">Sobre</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="https://www.instagram.com/vipmultimarcasss" target="_blank" rel="noopener"
+           aria-label="Instagram VIP Multimarcas"
+           class="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center text-silver hover:text-gold2 hover:border-gold/60 transition-colors">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#lead" class="bg-gold hover:bg-gold2 text-ink font-bold text-sm uppercase tracking-wide px-6 py-3 rounded-md transition-colors">
+          Fale conosco
+        </a>
+      </div>
+
+      <button id="menuBtn" class="lg:hidden text-bone" aria-label="Abrir menu">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- mobile menu -->
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-white/5 bg-ink px-6 py-5 space-y-4 text-sm font-semibold uppercase tracking-wide text-silver">
+    <a href="#estoque" class="block hover:text-gold2">Estoque</a>
+    <a href="#venda" class="block hover:text-gold2">Venda seu carro</a>
+    <a href="#financie" class="block hover:text-gold2">Financie</a>
+    <a href="#sobre" class="block hover:text-gold2">Sobre</a>
+    <a href="https://www.instagram.com/vipmultimarcasss" target="_blank" rel="noopener" class="block hover:text-gold2">Instagram</a>
+    <a href="#lead" class="block bg-gold text-ink text-center font-bold px-5 py-3 rounded-md">Fale conosco</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="relative bg-metal overflow-hidden">
+  <div class="absolute inset-0 opacity-25 bg-cover bg-center" style="background-image:url('https://resized-images.autoconf.com.br/1920x450/filters:format(jpg)/site/2233/4a801050-7d40-41c4-8e7f-06f4ea3c318e.jpg')"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/20"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 pt-16 pb-24 md:pt-24 md:pb-32">
+    <p class="text-gold2 text-xs md:text-sm font-semibold uppercase tracking-[0.25em] mb-4">Barueri &amp; região</p>
+    <h1 class="display text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] max-w-3xl">
+      O carro que você procura está mais perto do que imagina
+    </h1>
+    <p class="text-steel text-base md:text-lg max-w-xl mt-6">
+      Seminovos revisados, procedência garantida e condições que cabem no seu bolso. Fale agora com um consultor pelo WhatsApp.
+    </p>
+
+    <div class="flex flex-wrap gap-4 mt-9">
+      <a href="#estoque" class="bg-gold hover:bg-gold2 text-ink font-bold text-sm uppercase tracking-wide px-8 py-4 rounded-md transition-colors">
+        Ver estoque
+      </a>
+      <a href="https://wa.me/5582996402650?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20carros%20dispon%C3%ADveis." target="_blank" rel="noopener"
+         class="border border-white/25 hover:border-gold/60 hover:text-gold2 text-bone font-bold text-sm uppercase tracking-wide px-8 py-4 rounded-md transition-colors flex items-center gap-2">
+        <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor"><path d="M16.03 3C9.4 3 4 8.36 4 15c0 2.34.68 4.53 1.86 6.38L4 29l7.86-1.8A11.9 11.9 0 0 0 16.03 27C22.66 27 28 21.64 28 15S22.66 3 16.03 3zm6.98 16.9c-.3.83-1.53 1.55-2.44 1.68-.63.09-1.44.13-2.32-.15-.53-.17-1.22-.4-2.1-.78-3.68-1.59-6.08-5.27-6.27-5.52-.18-.25-1.5-1.99-1.5-3.8 0-1.8 1-2.68 1.35-3.05.33-.35.72-.44.96-.44h.7c.22 0 .53-.04.83.63.3.68 1.03 2.36 1.12 2.53.09.17.15.37.03.6-.12.24-.18.38-.36.6-.18.2-.38.46-.54.62-.18.18-.37.37-.16.73.21.37.94 1.55 2.02 2.5 1.39 1.24 2.56 1.62 2.93 1.8.37.18.58.15.8-.09.21-.24.9-1.05 1.14-1.42.24-.36.48-.3.8-.18.33.12 2.1.99 2.46 1.17.36.18.6.27.68.42.09.15.09.85-.2 1.67z"/></svg>
+        Chamar no WhatsApp
+      </a>
+    </div>
+
+    <div class="grid grid-cols-3 max-w-md gap-8 mt-14 pt-8 border-t border-white/10">
+      <div>
+        <p class="display text-3xl md:text-4xl font-semibold gold-text">+500</p>
+        <p class="text-steel text-xs uppercase tracking-wide mt-1">Carros vendidos</p>
+      </div>
+      <div>
+        <p class="display text-3xl md:text-4xl font-semibold gold-text">100%</p>
+        <p class="text-steel text-xs uppercase tracking-wide mt-1">Procedência</p>
+      </div>
+      <div>
+        <p class="display text-3xl md:text-4xl font-semibold gold-text">5★</p>
+        <p class="text-steel text-xs uppercase tracking-wide mt-1">Avaliação clientes</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BUSCA ============ -->
+<section id="estoque" class="relative -mt-10 md:-mt-14 z-10">
+  <div class="max-w-5xl mx-auto px-6">
+    <form onsubmit="return buscarEstoque(event)" class="bg-navy border border-white/10 rounded-xl shadow-2xl shadow-black/40 p-5 md:p-6 grid md:grid-cols-[1.6fr_1fr_1fr_auto] gap-4">
+      <div>
+        <label class="block text-[11px] uppercase tracking-wide text-steel mb-1.5">Qual veículo você procura?</label>
+        <input type="text" placeholder="Ex: Honda HR-V, Nivus, Onix..." class="w-full bg-ink/70 border border-white/10 rounded-md px-4 py-3 text-sm text-bone placeholder:text-steel/70">
+      </div>
+      <div>
+        <label class="block text-[11px] uppercase tracking-wide text-steel mb-1.5">Marca</label>
+        <select class="w-full bg-ink/70 border border-white/10 rounded-md px-4 py-3 text-sm text-bone">
+          <option>Todas as marcas</option>
+          <option>Honda</option>
+          <option>Volkswagen</option>
+          <option>Toyota</option>
+          <option>Fiat</option>
+          <option>Jeep</option>
+          <option>BMW</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-[11px] uppercase tracking-wide text-steel mb-1.5">Faixa de preço</label>
+        <select class="w-full bg-ink/70 border border-white/10 rounded-md px-4 py-3 text-sm text-bone">
+          <option>Qualquer valor</option>
+          <option>Até R$ 60.000</option>
+          <option>R$ 60.000 – R$ 100.000</option>
+          <option>R$ 100.000 – R$ 150.000</option>
+          <option>Acima de R$ 150.000</option>
+        </select>
+      </div>
+      <button type="submit" class="bg-gold hover:bg-gold2 text-ink font-bold text-sm uppercase tracking-wide rounded-md px-7 py-3 self-end transition-colors">
+        Buscar
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ MARCAS ============ -->
+<section class="max-w-7xl mx-auto px-6 pt-20 pb-4">
+  <p class="text-center text-steel text-xs uppercase tracking-[0.25em] mb-8">Trabalhamos com as principais marcas</p>
+</section>
+
+<div class="overflow-hidden border-y border-white/5 bg-[#0C1018] py-8">
+  <div class="brand-strip flex items-center gap-16 w-max">
+    <!-- set 1 -->
+    <img src="https://static.autoconf.com.br/marcas/audi.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Audi">
+    <img src="https://static.autoconf.com.br/marcas/bmw.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="BMW">
+    <img src="https://static.autoconf.com.br/marcas/fiat.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Fiat">
+    <img src="https://static.autoconf.com.br/marcas/ford.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Ford">
+    <img src="https://static.autoconf.com.br/marcas/honda.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Honda">
+    <img src="https://static.autoconf.com.br/marcas/hyundai.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Hyundai">
+    <img src="https://static.autoconf.com.br/marcas/jeep.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Jeep">
+    <img src="https://static.autoconf.com.br/marcas/land-rover.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Land Rover">
+    <img src="https://static.autoconf.com.br/marcas/mercedes-benz.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Mercedes-Benz">
+    <img src="https://static.autoconf.com.br/marcas/nissan.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Nissan">
+    <img src="https://static.autoconf.com.br/marcas/porsche.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Porsche">
+    <img src="https://static.autoconf.com.br/marcas/renault.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Renault">
+    <img src="https://static.autoconf.com.br/marcas/toyota.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Toyota">
+    <img src="https://static.autoconf.com.br/marcas/vw-volkswagen.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Volkswagen">
+    <!-- set 2 (duplicate for seamless loop) -->
+    <img src="https://static.autoconf.com.br/marcas/audi.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Audi">
+    <img src="https://static.autoconf.com.br/marcas/bmw.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="BMW">
+    <img src="https://static.autoconf.com.br/marcas/fiat.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Fiat">
+    <img src="https://static.autoconf.com.br/marcas/ford.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Ford">
+    <img src="https://static.autoconf.com.br/marcas/honda.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Honda">
+    <img src="https://static.autoconf.com.br/marcas/hyundai.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Hyundai">
+    <img src="https://static.autoconf.com.br/marcas/jeep.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Jeep">
+    <img src="https://static.autoconf.com.br/marcas/land-rover.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Land Rover">
+    <img src="https://static.autoconf.com.br/marcas/mercedes-benz.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Mercedes-Benz">
+    <img src="https://static.autoconf.com.br/marcas/nissan.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Nissan">
+    <img src="https://static.autoconf.com.br/marcas/porsche.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Porsche">
+    <img src="https://static.autoconf.com.br/marcas/renault.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Renault">
+    <img src="https://static.autoconf.com.br/marcas/toyota.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Toyota">
+    <img src="https://static.autoconf.com.br/marcas/vw-volkswagen.png" class="h-9 opacity-70 hover:opacity-100 transition" alt="Volkswagen">
+  </div>
+</div>
+
+<!-- ============ ÚLTIMAS NOVIDADES ============ -->
+<section class="max-w-7xl mx-auto px-6 py-24">
+  <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+    <div>
+      <p class="text-gold2 text-xs font-semibold uppercase tracking-[0.25em] mb-2">Estoque atualizado</p>
+      <h2 class="display text-3xl md:text-4xl font-semibold">Últimas novidades</h2>
+    </div>
+    <a href="#lead" class="text-sm font-semibold text-silver hover:text-gold2 uppercase tracking-wide transition-colors">Ver todo estoque →</a>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-7">
+
+    <!-- CARD 1 -->
+    <article class="card-hover bg-navy border border-white/10 rounded-xl overflow-hidden">
+      <div class="relative h-52 bg-[#1B2740] flex items-center justify-center overflow-hidden">
+        <img src="https://static.autoconf.com.br/marcas/honda.png" class="h-16 opacity-90" alt="Honda">
+        <span class="absolute top-3 left-3 bg-gold text-ink text-[11px] font-bold uppercase tracking-wide px-3 py-1 rounded">2024/2025</span>
+      </div>
+      <div class="p-6">
+        <h3 class="font-display text-xl font-semibold">Honda HR-V EX</h3>
+        <p class="text-steel text-sm mt-1">1.5 Flex Sensing 16V 5p Aut.</p>
+        <div class="flex items-center gap-4 text-xs text-steel mt-4">
+          <span>📅 2024/2025</span>
+          <span>🛣️ 15.000 km</span>
+        </div>
+        <div class="mt-5 pt-5 border-t border-white/10 flex items-end justify-between">
+          <div>
+            <p class="text-steel text-xs line-through">R$ 154.900</p>
+            <p class="gold-text font-display text-2xl font-semibold">R$ 149.900</p>
+          </div>
+          <a href="https://wa.me/5582996402650?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Honda%20HR-V%20EX%202024%2F2025." target="_blank" rel="noopener"
+             class="text-xs font-bold uppercase tracking-wide border border-white/20 hover:border-gold/60 hover:text-gold2 px-4 py-2 rounded-md transition-colors">Tenho interesse</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 2 -->
+    <article class="card-hover bg-navy border border-white/10 rounded-xl overflow-hidden">
+      <div class="relative h-52 bg-[#1B2740] flex items-center justify-center overflow-hidden">
+        <img src="https://static.autoconf.com.br/marcas/vw-volkswagen.png" class="h-16 opacity-90" alt="Volkswagen">
+        <span class="absolute top-3 left-3 bg-gold text-ink text-[11px] font-bold uppercase tracking-wide px-3 py-1 rounded">2023/2023</span>
+      </div>
+      <div class="p-6">
+        <h3 class="font-display text-xl font-semibold">VW Nivus Highline</h3>
+        <p class="text-steel text-sm mt-1">1.0 200 TSI Flex Aut.</p>
+        <div class="flex items-center gap-4 text-xs text-steel mt-4">
+          <span>📅 2023/2023</span>
+          <span>🛣️ 33.559 km</span>
+        </div>
+        <div class="mt-5 pt-5 border-t border-white/10 flex items-end justify-between">
+          <div>
+            <p class="text-steel text-xs line-through">R$ 118.900</p>
+            <p class="gold-text font-display text-2xl font-semibold">R$ 114.900</p>
+          </div>
+          <a href="https://wa.me/5582996402650?text=Ol%C3%A1!%20Tenho%20interesse%20no%20VW%20Nivus%20Highline%202023." target="_blank" rel="noopener"
+             class="text-xs font-bold uppercase tracking-wide border border-white/20 hover:border-gold/60 hover:text-gold2 px-4 py-2 rounded-md transition-colors">Tenho interesse</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 3 -->
+    <article class="card-hover bg-navy border border-white/10 rounded-xl overflow-hidden">
+      <div class="relative h-52 bg-[#1B2740] flex items-center justify-center overflow-hidden">
+        <img src="https://static.autoconf.com.br/marcas/honda.png" class="h-16 opacity-90" alt="Honda">
+        <span class="absolute top-3 left-3 bg-gold text-ink text-[11px] font-bold uppercase tracking-wide px-3 py-1 rounded">2024/2025</span>
+      </div>
+      <div class="p-6">
+        <h3 class="font-display text-xl font-semibold">Honda HR-V EXL</h3>
+        <p class="text-steel text-sm mt-1">1.5 Flex Sensing 16V 5p Aut. – Preto</p>
+        <div class="flex items-center gap-4 text-xs text-steel mt-4">
+          <span>📅 2024/2025</span>
+          <span>🛣️ 35.750 km</span>
+        </div>
+        <div class="mt-5 pt-5 border-t border-white/10 flex items-end justify-between">
+          <div>
+            <p class="text-steel text-xs line-through">R$ 155.900</p>
+            <p class="gold-text font-display text-2xl font-semibold">R$ 149.900</p>
+          </div>
+          <a href="https://wa.me/5582996402650?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Honda%20HR-V%20EXL%202024%2F2025." target="_blank" rel="noopener"
+             class="text-xs font-bold uppercase tracking-wide border border-white/20 hover:border-gold/60 hover:text-gold2 px-4 py-2 rounded-md transition-colors">Tenho interesse</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ VENDA / FINANCIE ============ -->
+<section class="max-w-7xl mx-auto px-6 pb-24 grid md:grid-cols-2 gap-7">
+
+  <div id="venda" class="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-navy2 to-navy p-9 md:p-11">
+    <p class="text-gold2 text-xs font-semibold uppercase tracking-[0.25em] mb-3">Avaliação sem compromisso</p>
+    <h3 class="display text-3xl font-semibold mb-3">Venda seu carro</h3>
+    <p class="text-steel max-w-sm mb-8">Solicite a avaliação do seu veículo online, no conforto da sua casa, e receba uma proposta justa em minutos.</p>
+    <a href="https://wa.me/5582996402650?text=Ol%C3%A1!%20Quero%20avaliar%20meu%20carro%20para%20venda." target="_blank" rel="noopener"
+       class="inline-block bg-gold hover:bg-gold2 text-ink font-bold text-sm uppercase tracking-wide px-7 py-3.5 rounded-md transition-colors">
+      Avalie agora
+    </a>
+    <div class="absolute -right-6 -bottom-10 text-[9rem] leading-none opacity-10 select-none pointer-events-none">🚗</div>
+  </div>
+
+  <div id="financie" class="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-navy2 to-navy p-9 md:p-11">
+    <p class="text-gold2 text-xs font-semibold uppercase tracking-[0.25em] mb-3">Melhores taxas do mercado</p>
+    <h3 class="display text-3xl font-semibold mb-3">Financie seu sonho</h3>
+    <p class="text-steel max-w-sm mb-8">Trabalhamos com as principais financeiras do país — isso garante as melhores condições e taxas para você.</p>
+    <a href="https://wa.me/5582996402650?text=Ol%C3%A1!%20Quero%20fazer%20uma%20simula%C3%A7%C3%A3o%20de%20financiamento." target="_blank" rel="noopener"
+       class="inline-block bg-gold hover:bg-gold2 text-ink font-bold text-sm uppercase tracking-wide px-7 py-3.5 rounded-md transition-colors">
+      Faça uma simulação
+    </a>
+    <div class="absolute -right-6 -bottom-10 text-[9rem] leading-none opacity-10 select-none pointer-events-none">🔑</div>
+  </div>
+
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section id="sobre" class="border-y border-white/5 bg-[#0C1018] py-24">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
+    <div>
+      <p class="text-gold2 text-xs font-semibold uppercase tracking-[0.25em] mb-3">Quem somos</p>
+      <h2 class="display text-3xl md:text-4xl font-semibold mb-5">Confiança em cada quilômetro rodado</h2>
+      <p class="text-steel leading-relaxed mb-6">
+        A VIP Multimarcas é referência em compra e venda de carros seminovos e usados em Barueri e região. Cada veículo passa por avaliação criteriosa antes de chegar até você — procedência, documentação e transparência em primeiro lugar.
+      </p>
+      <div class="grid grid-cols-2 gap-6">
+        <div class="border-l-2 border-gold pl-4">
+          <p class="display text-2xl font-semibold gold-text">Procedência</p>
+          <p class="text-steel text-sm mt-1">Documentação verificada</p>
+        </div>
+        <div class="border-l-2 border-gold pl-4">
+          <p class="display text-2xl font-semibold gold-text">Avaliação</p>
+          <p class="text-steel text-sm mt-1">Vistoria completa</p>
+        </div>
+        <div class="border-l-2 border-gold pl-4">
+          <p class="display text-2xl font-semibold gold-text">Financiamento</p>
+          <p class="text-steel text-sm mt-1">Parceria com as principais bancos</p>
+        </div>
+        <div class="border-l-2 border-gold pl-4">
+          <p class="display text-2xl font-semibold gold-text">Atendimento</p>
+          <p class="text-steel text-sm mt-1">Consultores especializados</p>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="rounded-xl border border-white/10 bg-gradient-to-br from-navy2 to-ink p-10 flex items-center justify-center">
+        <img src="logo.png" alt="VIP Multimarcas" class="w-64 max-w-full">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORMULÁRIO DE LEADS ============ -->
+<section id="lead" class="relative bg-metal py-24">
+  <div class="absolute inset-0 gold-line h-px top-0"></div>
+  <div class="max-w-3xl mx-auto px-6 text-center mb-12">
+    <p class="text-gold2 text-xs font-semibold uppercase tracking-[0.25em] mb-3">Atendimento personalizado</p>
+    <h2 class="display text-3xl md:text-4xl font-semibold mb-4">Fale agora com um consultor</h2>
+    <p class="text-steel">Preencha os campos abaixo e envie sua mensagem direto para o nosso WhatsApp.</p>
+  </div>
+
+  <form id="leadForm" onsubmit="return enviarWhats(event)" class="max-w-xl mx-auto px-6">
+    <div class="bg-navy border border-white/10 rounded-xl p-7 md:p-9 space-y-5">
+
+      <div>
+        <label class="block text-[11px] uppercase tracking-wide text-steel mb-1.5">Nome completo</label>
+        <input required id="leadNome" type="text" placeholder="Seu nome"
+               class="w-full bg-ink/70 border border-white/10 rounded-md px-4 py-3 text-sm text-bone placeholder:text-steel/70">
+      </div>
+
+      <div>
+        <label class="block text-[11px] uppercase tracking-wide text-steel mb-1.5">Seu WhatsApp</label>
+        <input required id="leadTelefone" type="tel" placeholder="(82) 9 0000-0000"
+               class="w-full bg-ink/70 border border-white/10 rounded-md px-4 py-3 text-sm text-bone placeholder:text-steel/70">
+      </div>
+
+      <div>
+        <label class="block text-[11px] uppercase tracking-wide text-steel mb-1.5">Tenho interesse em</label>
+        <select id="leadInteresse" class="w-full bg-ink/70 border border-white/10 rounded-md px-4 py-3 text-sm text-bone">
+          <option>Comprar um carro</option>
+          <option>Vender meu carro</option>
+          <option>Financiar um veículo</option>
+          <option>Outro assunto</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-[11px] uppercase tracking-wide text-steel mb-1.5">Mensagem (opcional)</label>
+        <textarea id="leadMensagem" rows="3" placeholder="Conte um pouco mais sobre o que procura..."
+                  class="w-full bg-ink/70 border border-white/10 rounded-md px-4 py-3 text-sm text-bone placeholder:text-steel/70 resize-none"></textarea>
+      </div>
+
+      <button type="submit" class="w-full bg-gold hover:bg-gold2 text-ink font-bold text-sm uppercase tracking-wide px-7 py-4 rounded-md transition-colors flex items-center justify-center gap-2">
+        <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor"><path d="M16.03 3C9.4 3 4 8.36 4 15c0 2.34.68 4.53 1.86 6.38L4 29l7.86-1.8A11.9 11.9 0 0 0 16.03 27C22.66 27 28 21.64 28 15S22.66 3 16.03 3zm6.98 16.9c-.3.83-1.53 1.55-2.44 1.68-.63.09-1.44.13-2.32-.15-.53-.17-1.22-.4-2.1-.78-3.68-1.59-6.08-5.27-6.27-5.52-.18-.25-1.5-1.99-1.5-3.8 0-1.8 1-2.68 1.35-3.05.33-.35.72-.44.96-.44h.7c.22 0 .53-.04.83.63.3.68 1.03 2.36 1.12 2.53.09.17.15.37.03.6-.12.24-.18.38-.36.6-.18.2-.38.46-.54.62-.18.18-.37.37-.16.73.21.37.94 1.55 2.02 2.5 1.39 1.24 2.56 1.62 2.93 1.8.37.18.58.15.8-.09.21-.24.9-1.05 1.14-1.42.24-.36.48-.3.8-.18.33.12 2.1.99 2.46 1.17.36.18.6.27.68.42.09.15.09.85-.2 1.67z"/></svg>
+        Enviar pelo WhatsApp
+      </button>
+      <p class="text-center text-[11px] text-steel/70">Ao enviar, você será redirecionado ao WhatsApp da VIP Multimarcas.</p>
+    </div>
+  </form>
+</section>
+
+<!-- ============ LOCALIZAÇÃO / HORÁRIO ============ -->
+<section class="border-t border-white/5 bg-[#0C1018] py-20">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-stretch">
+    <div class="rounded-xl overflow-hidden border border-white/10 min-h-[320px]">
+      <iframe
+        src="https://maps.google.com/maps?q=vip+multimarcas+avenida+municipal+61+jardim+silveira+barueri+sao+paulo++06433030&output=embed"
+        class="w-full h-full min-h-[320px] grayscale-[35%] contrast-125"
+        style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Localização VIP Multimarcas"></iframe>
+    </div>
+
+    <div class="flex flex-col justify-center">
+      <p class="text-gold2 text-xs font-semibold uppercase tracking-[0.25em] mb-3">Visite nossa loja</p>
+      <h2 class="display text-3xl md:text-4xl font-semibold mb-7">Localização e horário</h2>
+
+      <div class="space-y-6">
+        <div class="flex gap-4">
+          <div class="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center shrink-0 text-gold2">📍</div>
+          <div>
+            <p class="font-semibold">Endereço</p>
+            <p class="text-steel text-sm mt-1">Avenida Municipal, 61 — Jardim Silveira, Barueri/SP — CEP 06433-030</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center shrink-0 text-gold2">🕘</div>
+          <div>
+            <p class="font-semibold">Horário de atendimento</p>
+            <p class="text-steel text-sm mt-1">Seg a sexta – 9h às 18h<br>Sáb – 9h às 16h</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center shrink-0 text-gold2">💬</div>
+          <div>
+            <p class="font-semibold">WhatsApp</p>
+            <a href="https://wa.me/5582996402650" target="_blank" rel="noopener" class="text-steel text-sm mt-1 hover:text-gold2 transition-colors">(82) 99640-2650</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://wa.me/5582996402650" target="_blank" rel="noopener"
+         class="mt-8 inline-flex w-max items-center gap-2 bg-gold hover:bg-gold2 text-ink font-bold text-sm uppercase tracking-wide px-7 py-3.5 rounded-md transition-colors">
+        Chamar no WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink border-t border-white/5 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 items-start">
+
+    <div>
+      <img src="logo.png" alt="VIP Multimarcas" class="h-16 w-auto mb-4">
+      <p class="text-steel text-sm max-w-xs">Compra e venda de carros seminovos e usados em Barueri e região.</p>
+    </div>
+
+    <div>
+      <p class="text-xs uppercase tracking-wide text-steel mb-4">Navegação</p>
+      <ul class="space-y-2.5 text-sm text-silver">
+        <li><a href="#estoque" class="hover:text-gold2 transition-colors">Estoque</a></li>
+        <li><a href="#venda" class="hover:text-gold2 transition-colors">Venda seu carro</a></li>
+        <li><a href="#financie" class="hover:text-gold2 transition-colors">Financie</a></li>
+        <li><a href="#sobre" class="hover:text-gold2 transition-colors">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="text-xs uppercase tracking-wide text-steel mb-4">Fale conosco</p>
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/5582996402650" target="_blank" rel="noopener" aria-label="WhatsApp"
+           class="w-11 h-11 rounded-full border border-white/15 flex items-center justify-center text-silver hover:text-gold2 hover:border-gold/60 transition-colors">
+          <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor"><path d="M16.03 3C9.4 3 4 8.36 4 15c0 2.34.68 4.53 1.86 6.38L4 29l7.86-1.8A11.9 11.9 0 0 0 16.03 27C22.66 27 28 21.64 28 15S22.66 3 16.03 3zm6.98 16.9c-.3.83-1.53 1.55-2.44 1.68-.63.09-1.44.13-2.32-.15-.53-.17-1.22-.4-2.1-.78-3.68-1.59-6.08-5.27-6.27-5.52-.18-.25-1.5-1.99-1.5-3.8 0-1.8 1-2.68 1.35-3.05.33-.35.72-.44.96-.44h.7c.22 0 .53-.04.83.63.3.68 1.03 2.36 1.12 2.53.09.17.15.37.03.6-.12.24-.18.38-.36.6-.18.2-.38.46-.54.62-.18.18-.37.37-.16.73.21.37.94 1.55 2.02 2.5 1.39 1.24 2.56 1.62 2.93 1.8.37.18.58.15.8-.09.21-.24.9-1.05 1.14-1.42.24-.36.48-.3.8-.18.33.12 2.1.99 2.46 1.17.36.18.6.27.68.42.09.15.09.85-.2 1.67z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/vipmultimarcasss" target="_blank" rel="noopener" aria-label="Instagram"
+           class="w-11 h-11 rounded-full border border-white/15 flex items-center justify-center text-silver hover:text-gold2 hover:border-gold/60 transition-colors">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+      <p class="text-steel text-sm mt-4">Avenida Municipal, 61 — Jardim Silveira, Barueri/SP</p>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-steel/70">
+    <p>© 2026 VIP Multimarcas. Todos os direitos reservados.</p>
+    <p>Landing page desenvolvida para captação de leads via WhatsApp.</p>
+  </div>
+</footer>
+
+<!-- ============ BOTÃO FLUTUANTE WHATSAPP ============ -->
+<a href="https://wa.me/5582996402650?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20falar%20com%20a%20VIP%20Multimarcas."
+   target="_blank" rel="noopener" aria-label="Falar no WhatsApp"
+   class="fixed bottom-6 right-6 z-50 group">
+  <span class="relative flex items-center justify-center w-16 h-16 rounded-full bg-[#25D366] shadow-2xl shadow-black/40">
+    <span class="whats-pulse absolute inset-0 rounded-full"></span>
+    <svg class="relative" width="30" height="30" viewBox="0 0 32 32" fill="#0A0D13"><path d="M16.03 3C9.4 3 4 8.36 4 15c0 2.34.68 4.53 1.86 6.38L4 29l7.86-1.8A11.9 11.9 0 0 0 16.03 27C22.66 27 28 21.64 28 15S22.66 3 16.03 3zm6.98 16.9c-.3.83-1.53 1.55-2.44 1.68-.63.09-1.44.13-2.32-.15-.53-.17-1.22-.4-2.1-.78-3.68-1.59-6.08-5.27-6.27-5.52-.18-.25-1.5-1.99-1.5-3.8 0-1.8 1-2.68 1.35-3.05.33-.35.72-.44.96-.44h.7c.22 0 .53-.04.83.63.3.68 1.03 2.36 1.12 2.53.09.17.15.37.03.6-.12.24-.18.38-.36.6-.18.2-.38.46-.54.62-.18.18-.37.37-.16.73.21.37.94 1.55 2.02 2.5 1.39 1.24 2.56 1.62 2.93 1.8.37.18.58.15.8-.09.21-.24.9-1.05 1.14-1.42.24-.36.48-.3.8-.18.33.12 2.1.99 2.46 1.17.36.18.6.27.68.42.09.15.09.85-.2 1.67z"/></svg>
+  </span>
+  <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap bg-navy border border-white/10 text-bone text-xs font-semibold px-3 py-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+    Fale conosco
+  </span>
+</a>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+  function enviarWhats(e) {
+    e.preventDefault();
+    const nome = document.getElementById('leadNome').value.trim();
+    const tel = document.getElementById('leadTelefone').value.trim();
+    const interesse = document.getElementById('leadInteresse').value;
+    const msg = document.getElementById('leadMensagem').value.trim();
+
+    let texto = `Olá, meu nome é ${nome}.\nMeu WhatsApp: ${tel}\nInteresse: ${interesse}`;
+    if (msg) texto += `\nMensagem: ${msg}`;
+
+    const url = `https://wa.me/5582996402650?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank');
+    return false;
+  }
+
+  function buscarEstoque(e) {
+    e.preventDefault();
+    document.getElementById('lead').scrollIntoView({behavior:'smooth'});
+    return false;
+  }
+</script>
+
+</body>
+</html>
