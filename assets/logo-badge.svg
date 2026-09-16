@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&amp;family=Plus+Jakarta+Sans:wght@500;600&amp;display=swap');
+      .serif-badge { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; }
+      .sub-badge { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 8.5px; letter-spacing: 0.16em; font-weight: 600; }
+    </style>
+    <radialGradient id="badge-grad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0B0F17" />
+    </radialGradient>
+  </defs>
+
+  <!-- Circular dark background -->
+  <circle cx="100" cy="100" r="96" fill="url(#badge-grad)" stroke="#334155" stroke-width="2" />
+
+  <!-- Inner subtle ring -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1" />
+
+  <!-- Group for typography -->
+  <g transform="translate(26, 42)">
+    <!-- Red square with T -->
+    <rect x="18" y="4" width="34" height="34" rx="2" fill="#C81E1E" />
+    <text x="35" y="30" text-anchor="middle" fill="#FFFFFF" class="serif-badge" font-size="28" font-weight="900">T</text>
+
+    <!-- IAGO in white -->
+    <text x="56" y="30" fill="#FFFFFF" class="serif-badge" font-size="23" letter-spacing="1.5">IAGO</text>
+
+    <!-- White square with M -->
+    <rect x="0" y="32" width="36" height="36" rx="2" fill="#FFFFFF" />
+    <text x="18" y="60" text-anchor="middle" fill="#0B0F17" class="serif-badge" font-size="28" font-weight="900">M</text>
+
+    <!-- ANSO in white -->
+    <text x="40" y="58" fill="#FFFFFF" class="serif-badge" font-size="23" letter-spacing="1.5">ANSO</text>
+
+    <!-- Assessoria Contábil in white/light slate -->
+    <text x="50" y="74" fill="#CBD5E1" class="sub-badge" text-transform="uppercase">ASSESSORIA CONTÁBIL</text>
+  </g>
+</svg>

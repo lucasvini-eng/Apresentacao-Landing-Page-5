@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiago Manso | Assessoria Contábil Consultiva & Redução de Impostos</title>
+  
+  <!-- Metatags de SEO e Conversão -->
+  <meta name="description" content="Assessoria contábil moderna e consultiva para empresas que buscam pagar menos impostos legalmente, atendimento ágil via WhatsApp e abertura de empresa sem custos de honorários.">
+  <meta name="keywords" content="contabilidade, assessoria contábil, tiago manso, abrir empresa, reduzir impostos, simples nacional, bpo financeiro, contador consultivo">
+  <meta property="og:title" content="Tiago Manso Assessoria Contábil | Gestão Estratégica & Fiscal">
+  <meta property="og:description" content="Pague menos impostos dentro da lei e tenha um contador estratégico direto no WhatsApp. Conheça a assessoria contábil focada em lucro para sua empresa.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#C81E1E',
+              redHover: '#B91C1C',
+              redLight: '#FEF2F2',
+              dark: '#0F172A',
+              slate: '#1E293B',
+              offwhite: '#F8FAFC',
+              subtle: '#F1F5F9',
+              wa: '#25D366',
+              waHover: '#20BA5A'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#F8FAFC] text-slate-800 antialiased selection:bg-red-100 selection:text-red-900">
+
+  <!-- =========================================================================
+       BARRA SUPERIOR DE ALERTA E CONVERSÃO
+       ========================================================================= -->
+  <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white text-xs py-2 px-4 text-center border-b border-slate-700/50">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-3 flex-wrap">
+      <span class="inline-flex items-center gap-1.5 bg-red-600/30 text-red-300 font-semibold px-2 py-0.5 rounded border border-red-500/40 text-[11px]">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-red-400"></i> Condição Especial
+      </span>
+      <span>Abertura de CNPJ com <strong>Honorários Isentos</strong> no plano de assessoria anual.</span>
+      <a href="#simulador" class="underline underline-offset-2 hover:text-red-300 font-semibold transition ml-1 inline-flex items-center gap-1">
+        Simular Diagnóstico Grátis <i data-lucide="arrow-right" class="w-3 h-3"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       HEADER FIXO COM GLASSMORPHISM
+       ========================================================================= -->
+  <header id="main-header" class="sticky top-0 z-40 glass-header transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO -->
+      <a href="#" class="flex items-center gap-3 group focus:outline-none" aria-label="Tiago Manso Assessoria Contábil">
+        <!-- SVG Vector Logo reproduzindo com máxima nitidez a identidade da marca -->
+        <div class="flex items-center">
+          <svg class="h-10 sm:h-12 w-auto" viewBox="0 0 320 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Bloco Vermelho com T -->
+            <rect x="14" y="6" width="38" height="38" rx="2" fill="#C81E1E" />
+            <text x="33" y="35" text-anchor="middle" fill="#FFFFFF" font-family="'Playfair Display', Georgia, serif" font-size="34" font-weight="900">T</text>
+            
+            <!-- IAGO em Carvão Profundo -->
+            <text x="58" y="35" fill="#0F172A" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="700" letter-spacing="1">IAGO</text>
+            
+            <!-- Bloco Branco com M e borda Grafite -->
+            <rect x="0" y="44" width="40" height="40" rx="2" fill="#FFFFFF" stroke="#0F172A" stroke-width="2.5" />
+            <text x="20" y="74" text-anchor="middle" fill="#0F172A" font-family="'Playfair Display', Georgia, serif" font-size="32" font-weight="900">M</text>
+            
+            <!-- ANSO em Carvão Profundo -->
+            <text x="46" y="73" fill="#0F172A" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="700" letter-spacing="1">ANSO</text>
+            
+            <!-- Subtítulo Assessoria Contábil -->
+            <text x="49" y="89" fill="#475569" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.19em">ASSESSORIA CONTÁBIL</text>
+          </svg>
+        </div>
+      </a>
+
+      <!-- NAVEGAÇÃO DESKTOP -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-700">
+        <a href="#diferenciais" class="hover:text-red-700 transition">Diferenciais</a>
+        <a href="#servicos" class="hover:text-red-700 transition">Serviços</a>
+        <a href="#simulador" class="hover:text-red-700 transition">Simulador Fiscal</a>
+        <a href="#como-funciona" class="hover:text-red-700 transition">Como Funciona</a>
+        <a href="#depoimentos" class="hover:text-red-700 transition">Depoimentos</a>
+        <a href="#faq" class="hover:text-red-700 transition">FAQ</a>
+      </nav>
+
+      <!-- BOTÃO CTA HEADER COM STATUS ONLINE -->
+      <div class="hidden lg:flex items-center gap-4">
+        <div class="flex items-center gap-2 bg-emerald-50 text-emerald-800 text-xs px-3 py-1.5 rounded-full border border-emerald-200">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 pulse-online"></span>
+          <span class="font-medium">Consultores Online</span>
+        </div>
+        
+        <a href="#" class="dynamic-wa-link btn-wa-glow text-white text-sm font-semibold px-4 py-2.5 rounded-xl flex items-center gap-2 transition" data-wa-text="Olá Tiago Manso! Gostaria de conversar com um especialista sobre a contabilidade da minha empresa.">
+          <i data-lucide="message-circle" class="w-4 h-4 fill-white text-emerald-600"></i>
+          <span>Falar no WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- BOTÃO HAMBURGUER MOBILE -->
+      <div class="flex items-center gap-2 md:hidden">
+        <a href="#" class="dynamic-wa-link bg-emerald-500 text-white p-2 rounded-lg" aria-label="WhatsApp direto">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+        </a>
+        <button id="mobile-menu-btn" class="text-slate-700 p-2 focus:outline-none" aria-label="Abrir Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- MENU MOBILE DRAWER -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-6 space-y-4 shadow-xl">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Navegação</span>
+        <button id="mobile-menu-close" class="text-slate-500 p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="flex flex-col space-y-3 text-base font-semibold text-slate-800">
+        <a href="#diferenciais" class="mobile-nav-link hover:text-red-700 py-1">Diferenciais</a>
+        <a href="#servicos" class="mobile-nav-link hover:text-red-700 py-1">Serviços Estratégicos</a>
+        <a href="#simulador" class="mobile-nav-link hover:text-red-700 py-1">Simulador de Economia</a>
+        <a href="#como-funciona" class="mobile-nav-link hover:text-red-700 py-1">Troca em 3 Passos</a>
+        <a href="#depoimentos" class="mobile-nav-link hover:text-red-700 py-1">Depoimentos de Clientes</a>
+        <a href="#faq" class="mobile-nav-link hover:text-red-700 py-1">Dúvidas Frequentes</a>
+      </div>
+      <div class="pt-4 border-t border-slate-100">
+        <a href="#" class="dynamic-wa-link btn-wa-glow text-white text-center font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 w-full">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span>Iniciar Atendimento no WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO SECTION DE ALTA CONVERSÃO
+       ========================================================================= -->
+  <section class="relative pt-12 pb-20 lg:pt-16 lg:pb-28 overflow-hidden bg-pattern-grid border-b border-slate-200/60">
+    <!-- Efeitos de iluminação sutil de fundo (vermelho manso suave e slate) -->
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-red-100/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+    <div class="absolute top-40 right-10 w-[450px] h-[300px] bg-slate-200/50 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- COLUNA DE TEXTO PERSUASIVO -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          
+          <!-- BADGE DE AUTORIDADE -->
+          <div class="inline-flex items-center gap-2 bg-white/90 border border-slate-300/80 px-3.5 py-1.5 rounded-full shadow-sm">
+            <span class="flex h-2 w-2 rounded-full bg-red-600"></span>
+            <span class="text-xs font-bold tracking-wide uppercase text-slate-800">Assessoria Contábil Consultiva & Estratégica</span>
+          </div>
+
+          <!-- HEADLINE PRINCIPAL COM FOCO NA DOR & DESEJO -->
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.18]">
+            Pague o <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-red-600 to-red-800">mínimo de impostos</span> dentro da lei e livre sua empresa de burocracias.
+          </h1>
+
+          <!-- SUBHEADLINE CLARA -->
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl font-normal">
+            Cansado de pagar caro por uma contabilidade que só envia guias no fim do mês? Na <strong>Tiago Manso Assessoria Contábil</strong>, você tem planejamento tributário ativo, atendimento ágil direto pelo WhatsApp e suporte dedicado ao crescimento do seu negócio.
+          </p>
+
+          <!-- LISTA DE BENEFÍCIOS IMEDIATOS COM CHECKMARKS -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-sm font-semibold text-slate-700">
+            <div class="flex items-center gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-red-100 text-red-700 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </div>
+              <span>Revisão Tributária Personalizada</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-red-100 text-red-700 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </div>
+              <span>Contador Dedicado via WhatsApp</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-red-100 text-red-700 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </div>
+              <span>Abertura Grátis no Plano Anual</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-red-100 text-red-700 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </div>
+              <span>Troca de Contador sem Atrito</span>
+            </div>
+          </div>
+
+          <!-- CTAS DE AÇÃO PRINCIPAIS -->
+          <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <a href="#" class="dynamic-wa-link btn-primary-glow text-white text-center font-bold px-7 py-4 rounded-xl text-base flex items-center justify-center gap-3 shadow-lg" data-wa-text="Olá Tiago Manso! Quero agendar uma consultoria contábil gratuita para analisar minha empresa.">
+              <i data-lucide="message-circle" class="w-5 h-5"></i>
+              <span>Falar com o Tiago no WhatsApp</span>
+            </a>
+
+            <a href="#simulador" class="bg-white hover:bg-slate-50 text-slate-800 text-center font-bold px-6 py-4 rounded-xl text-base border border-slate-300 shadow-sm transition flex items-center justify-center gap-2">
+              <i data-lucide="calculator" class="w-5 h-5 text-red-700"></i>
+              <span>Simular Minha Economia</span>
+            </a>
+          </div>
+
+          <!-- MICRO PROVA SOCIAL DE VELOCIDADE -->
+          <div class="flex items-center gap-4 pt-2 text-xs text-slate-500">
+            <span class="inline-flex items-center gap-1.5 font-medium">
+              <i data-lucide="clock" class="w-4 h-4 text-emerald-600"></i> Tempo médio de resposta: <strong>12 minutos</strong>
+            </span>
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+            <span class="inline-flex items-center gap-1.5 font-medium">
+              <i data-lucide="shield-check" class="w-4 h-4 text-red-600"></i> Registro Ativo no <strong>CRC</strong>
+            </span>
+          </div>
+
+        </div>
+
+        <!-- COLUNA DO CARD DE DESTAQUE / PROPOSTA DE VALOR -->
+        <div class="lg:col-span-5">
+          <div class="relative">
+            <!-- Emblema de fundo decorativo -->
+            <div class="absolute -top-6 -right-6 w-24 h-24 bg-red-600/10 rounded-full blur-xl pointer-events-none"></div>
+
+            <div class="glass-card rounded-2xl p-6 sm:p-8 shadow-xl border border-slate-200 relative overflow-hidden">
+              
+              <!-- TOPO DO CARD: IDENTIDADE E REPUTAÇÃO -->
+              <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+                <div class="flex items-center gap-3">
+                  <!-- Miniatura circular da marca -->
+                  <div class="w-12 h-12 rounded-full bg-slate-900 border-2 border-red-600 flex items-center justify-center shadow-md">
+                    <span class="text-white font-serif font-black text-lg">TM</span>
+                  </div>
+                  <div>
+                    <h3 class="text-base font-bold text-slate-900 leading-tight">Tiago Manso</h3>
+                    <p class="text-xs text-slate-500 font-medium">Contador Responsável • CRC Ativo</p>
+                  </div>
+                </div>
+
+                <div class="text-right">
+                  <div class="flex items-center justify-end text-amber-500 gap-0.5">
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                  </div>
+                  <span class="text-[11px] font-bold text-slate-600">4.9/5 no Google Reviews</span>
+                </div>
+              </div>
+
+              <!-- MÉTRICAS DE IMPACTO -->
+              <div class="py-6 space-y-4">
+                <div class="bg-slate-50 rounded-xl p-4 border border-slate-100 flex items-center justify-between">
+                  <div>
+                    <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Economia Gerada para Clientes</p>
+                    <p class="text-2xl font-black text-slate-900 mt-0.5">+ R$ 4.500.000</p>
+                  </div>
+                  <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+                    <i data-lucide="trending-down" class="w-6 h-6"></i>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                  <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-100">
+                    <p class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Empresas Assessoradas</p>
+                    <p class="text-xl font-extrabold text-slate-900 mt-0.5">+500</p>
+                    <span class="text-[10px] text-emerald-600 font-semibold flex items-center gap-0.5 mt-1">
+                      <i data-lucide="check-circle-2" class="w-3 h-3"></i> 100% em dia com o fisco
+                    </span>
+                  </div>
+
+                  <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-100">
+                    <p class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Índice de Retenção</p>
+                    <p class="text-xl font-extrabold text-slate-900 mt-0.5">99.4%</p>
+                    <span class="text-[10px] text-slate-500 font-semibold flex items-center gap-0.5 mt-1">
+                      <i data-lucide="heart-handshake" class="w-3 h-3 text-red-600"></i> Parceria duradoura
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- MINI CARD DE CHAMADA INTERNA -->
+              <div class="bg-gradient-to-r from-red-50 to-slate-50 border border-red-200/70 rounded-xl p-4 flex items-center gap-3.5">
+                <div class="w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center flex-shrink-0 shadow-sm">
+                  <i data-lucide="badge-percent" class="w-5 h-5"></i>
+                </div>
+                <div class="text-xs">
+                  <p class="font-bold text-slate-900">Diagnóstico Fiscal Inicial Gratuito</p>
+                  <p class="text-slate-600">Avaliamos seu enquadramento atual para identificar tributos pagos a mais.</p>
+                </div>
+              </div>
+
+              <div class="pt-5">
+                <button class="btn-open-modal w-full py-3 px-4 bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm rounded-xl transition flex items-center justify-center gap-2">
+                  <i data-lucide="calendar" class="w-4 h-4 text-red-400"></i>
+                  <span>Solicitar Diagnóstico Rápido</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO: FUNIL INTERATIVO DE QUALIFICAÇÃO & SIMULADOR (CRO MÁXIMO)
+       ========================================================================= -->
+  <section id="simulador" class="py-20 bg-slate-100/70 border-b border-slate-200/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center space-y-3 mb-12">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-red-100 text-red-800 border border-red-200">
+          <i data-lucide="sliders" class="w-3.5 h-3.5"></i> Funil Interativo de Atendimento
+        </span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">
+          Descubra o plano ideal e a <span class="text-red-700">economia estimada</span> para seu negócio
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
+          Responda a 3 passos rápidos para receber um diagnóstico preliminar e ser direcionado diretamente ao WhatsApp com a melhor estratégia para sua empresa.
+        </p>
+      </div>
+
+      <!-- CARD CONTAINER DO FUNIL -->
+      <div class="glass-card rounded-2xl shadow-xl border border-slate-200 p-6 sm:p-10 space-y-8">
+        
+        <!-- PASSO 1: OBJETIVO PRINCIPAL -->
+        <div class="space-y-3">
+          <label class="text-xs font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-red-600 text-white flex items-center justify-center text-[11px]">1</span>
+            Qual é a sua necessidade imediata?
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            
+            <div class="quiz-option selected rounded-xl p-4 flex items-center justify-between" data-group="objective" data-value="reduzir_impostos">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-red-50 text-red-700 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="trending-down" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-900">Trocar de Contador & Pagar Menos</h4>
+                  <p class="text-xs text-slate-500">Revisão do Simples, Lucro Presumido e encargos</p>
+                </div>
+              </div>
+              <div class="quiz-indicator w-5 h-5 rounded-full border-2 border-red-600 flex items-center justify-center flex-shrink-0">
+                <div class="quiz-indicator-inner w-2.5 h-2.5 rounded-full bg-white"></div>
+              </div>
+            </div>
+
+            <div class="quiz-option rounded-xl p-4 flex items-center justify-between" data-group="objective" data-value="abrir_empresa">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-red-50 text-red-700 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="rocket" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-900">Abrir Nova Empresa (CNPJ)</h4>
+                  <p class="text-xs text-slate-500">Abertura rápida com honorários grátis</p>
+                </div>
+              </div>
+              <div class="quiz-indicator w-5 h-5 rounded-full border-2 border-slate-300 flex items-center justify-center flex-shrink-0">
+                <div class="quiz-indicator-inner w-2.5 h-2.5 rounded-full bg-white opacity-0"></div>
+              </div>
+            </div>
+
+            <div class="quiz-option rounded-xl p-4 flex items-center justify-between" data-group="objective" data-value="bpo_financeiro">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-red-50 text-red-700 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="coins" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-900">Terceirizar Financeiro (BPO)</h4>
+                  <p class="text-xs text-slate-500">Contas a pagar/receber e conciliação bancária</p>
+                </div>
+              </div>
+              <div class="quiz-indicator w-5 h-5 rounded-full border-2 border-slate-300 flex items-center justify-center flex-shrink-0">
+                <div class="quiz-indicator-inner w-2.5 h-2.5 rounded-full bg-white opacity-0"></div>
+              </div>
+            </div>
+
+            <div class="quiz-option rounded-xl p-4 flex items-center justify-between" data-group="objective" data-value="regularizacao">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-red-50 text-red-700 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="file-warning" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-slate-900">Regularização & MEI para ME</h4>
+                  <p class="text-xs text-slate-500">Parcelamento de dívidas e desenquadramento seguro</p>
+                </div>
+              </div>
+              <div class="quiz-indicator w-5 h-5 rounded-full border-2 border-slate-300 flex items-center justify-center flex-shrink-0">
+                <div class="quiz-indicator-inner w-2.5 h-2.5 rounded-full bg-white opacity-0"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PASSO 2: SEGMENTO DA EMPRESA -->
+        <div class="space-y-3">
+          <label class="text-xs font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-red-600 text-white flex items-center justify-center text-[11px]">2</span>
+            Qual é o segmento de atuação?
+          </label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+            
+            <div class="quiz-option selected rounded-xl p-3 text-center" data-group="segment" data-value="servicos">
+              <i data-lucide="briefcase" class="w-5 h-5 mx-auto mb-1 text-slate-700"></i>
+              <p class="text-xs font-bold text-slate-900">Prestador de Serviços</p>
+            </div>
+
+            <div class="quiz-option rounded-xl p-3 text-center" data-group="segment" data-value="comercio">
+              <i data-lucide="shopping-bag" class="w-5 h-5 mx-auto mb-1 text-slate-700"></i>
+              <p class="text-xs font-bold text-slate-900">Comércio / Varejo</p>
+            </div>
+
+            <div class="quiz-option rounded-xl p-3 text-center" data-group="segment" data-value="saude">
+              <i data-lucide="stethoscope" class="w-5 h-5 mx-auto mb-1 text-slate-700"></i>
+              <p class="text-xs font-bold text-slate-900">Saúde & Clínicas</p>
+            </div>
+
+            <div class="quiz-option rounded-xl p-3 text-center" data-group="segment" data-value="tecnologia">
+              <i data-lucide="laptop" class="w-5 h-5 mx-auto mb-1 text-slate-700"></i>
+              <p class="text-xs font-bold text-slate-900">TI & Negócios Digitais</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PASSO 3: FATURAMENTO MÉDIO -->
+        <div class="space-y-3">
+          <label class="text-xs font-extrabold uppercase tracking-wider text-slate-500 flex items-center gap-2">
+            <span class="w-5 h-5 rounded-full bg-red-600 text-white flex items-center justify-center text-[11px]">3</span>
+            Faixa média de faturamento mensal estimada:
+          </label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+            
+            <div class="quiz-option rounded-xl p-3 text-center" data-group="faturamento" data-value="novo">
+              <span class="text-xs font-bold text-slate-800">Ainda vou abrir</span>
+              <p class="text-[10px] text-slate-500 mt-0.5">Fase de planejamento</p>
+            </div>
+
+            <div class="quiz-option rounded-xl p-3 text-center" data-group="faturamento" data-value="ate_20k">
+              <span class="text-xs font-bold text-slate-800">Até R$ 20 mil</span>
+              <p class="text-[10px] text-slate-500 mt-0.5">Microempresa / ME</p>
+            </div>
+
+            <div class="quiz-option selected rounded-xl p-3 text-center" data-group="faturamento" data-value="20k_80k">
+              <span class="text-xs font-bold text-slate-800">R$ 20k a R$ 80 mil</span>
+              <p class="text-[10px] text-slate-500 mt-0.5">Em expansão</p>
+            </div>
+
+            <div class="quiz-option rounded-xl p-3 text-center" data-group="faturamento" data-value="acima_80k">
+              <span class="text-xs font-bold text-slate-800">Acima de R$ 80 mil</span>
+              <p class="text-[10px] text-slate-500 mt-0.5">Médio / Grande porte</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- RESULTADO DINÂMICO DO DIAGNÓSTICO + BOTÃO WHATSAPP -->
+        <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+          
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-slate-700/80">
+            <div>
+              <span class="text-xs font-medium text-slate-400 uppercase tracking-widest">Resultado do Diagnóstico</span>
+              <h3 id="funnel-result-title" class="text-xl sm:text-2xl font-bold text-white mt-1">
+                Plano de Gestão Contábil Consultiva
+              </h3>
+            </div>
+            <div id="funnel-result-badge" class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 border border-emerald-300">
+              Potencial de Economia: Alto
+            </div>
+          </div>
+
+          <p id="funnel-result-desc" class="text-sm text-slate-300 py-4 leading-relaxed">
+            Sua empresa se enquadra na nossa consultoria com foco em blindagem fiscal e redução de encargos no Simples Nacional ou Lucro Presumido.
+          </p>
+
+          <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+            <div class="flex items-center gap-2 text-xs text-slate-300">
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+              <span>Diagnóstico sem compromisso com contador especialista</span>
+            </div>
+
+            <a id="funnel-whatsapp-btn" href="#" target="_blank" class="btn-wa-glow text-white font-bold px-7 py-3.5 rounded-xl text-sm flex items-center justify-center gap-2.5 shadow-lg">
+              <i data-lucide="message-circle" class="w-5 h-5 fill-white text-emerald-600"></i>
+              <span>Enviar Diagnóstico e Falar no WhatsApp</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO: DIFERENCIAIS (CONTABILIDADE TRADICIONAL VS. TIAGO MANSO)
+       ========================================================================= -->
+  <section id="diferenciais" class="py-20 bg-[#F8FAFC]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center space-y-3 mb-16">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-slate-200/80 text-slate-800 border border-slate-300/80">
+          <i data-lucide="award" class="w-3.5 h-3.5 text-red-600"></i> Por Que Somos Diferentes
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Você contrata um <span class="text-red-700">parceiro de crescimento</span>, não apenas um gerador de guias.
+        </h2>
+        <p class="text-slate-600 max-w-2xl mx-auto text-base">
+          Veja a diferença prática entre o modelo burocrático tradicional e a assessoria contábil moderna da Tiago Manso.
+        </p>
+      </div>
+
+      <!-- TABELA COMPARATIVA VISUAL -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        
+        <!-- CARD: OUTROS ESCRITÓRIOS / TRADICIONAL -->
+        <div class="bg-white rounded-2xl p-7 border border-slate-200 shadow-sm opacity-90 space-y-6">
+          <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+            <div>
+              <h3 class="text-lg font-bold text-slate-500">Contabilidade Tradicional</h3>
+              <p class="text-xs text-slate-400">Modelo passivo e burocrático</p>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center">
+              <i data-lucide="x" class="w-4 h-4"></i>
+            </div>
+          </div>
+
+          <ul class="space-y-4 text-sm text-slate-600">
+            <li class="flex items-start gap-3">
+              <i data-lucide="x-circle" class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5"></i>
+              <span>Atendimento moroso por chamados ou e-mails que levam dias para responder.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="x-circle" class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5"></i>
+              <span>Cobranças extras inesperadas por cada declaração, relatório ou certidão solicitada.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="x-circle" class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5"></i>
+              <span>Nunca faz planejamento tributário preventivo — você paga imposto sem saber se poderia pagar menos.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="x-circle" class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5"></i>
+              <span>Linguagem técnica inacessível que deixa o empresário confuso e inseguro.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CARD: TIAGO MANSO ASSESSORIA CONTÁBIL -->
+        <div class="bg-white rounded-2xl p-7 border-2 border-red-600 shadow-xl relative space-y-6">
+          <!-- Selo de destaque -->
+          <div class="absolute -top-3.5 right-6 bg-red-600 text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+            Padrão Tiago Manso
+          </div>
+
+          <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+            <div>
+              <h3 class="text-lg font-bold text-slate-900">Assessoria Tiago Manso</h3>
+              <p class="text-xs text-red-600 font-semibold">Contabilidade Consultiva & Estratégica</p>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center">
+              <i data-lucide="check" class="w-4 h-4 stroke-[3]"></i>
+            </div>
+          </div>
+
+          <ul class="space-y-4 text-sm font-medium text-slate-800">
+            <li class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Contador dedicado direto no WhatsApp:</strong> respostas ágeis e sem filas de tickets.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Planejamento Tributário Ativo:</strong> recalculamos seu enquadramento para garantir menor tributo legal.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Mensalidade transparente e sem surpresas:</strong> todas as obrigações essenciais já inclusas.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Linguagem simples e visão executiva:</strong> você entende cada número da sua empresa.</span>
+            </li>
+          </ul>
+
+          <div class="pt-2">
+            <a href="#" class="dynamic-wa-link btn-primary-glow text-white text-center font-bold py-3 px-4 rounded-xl text-sm flex items-center justify-center gap-2 w-full" data-wa-text="Olá Tiago Manso! Quero migrar a contabilidade da minha empresa para o seu escritório.">
+              <span>Quero Migrar Minha Contabilidade Agora</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO: SERVIÇOS ESTRATÉGICOS
+       ========================================================================= -->
+  <section id="servicos" class="py-20 bg-slate-100/60 border-t border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center space-y-3 mb-16">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-red-100 text-red-800 border border-red-200">
+          <i data-lucide="layers" class="w-3.5 h-3.5"></i> Nossas Especialidades
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Soluções completas para cada estágio do seu negócio
+        </h2>
+        <p class="text-slate-600 max-w-2xl mx-auto text-base">
+          Do registro inicial do CNPJ à estruturação tributária de grandes faturamentos, entregamos segurança em cada detalhe.
+        </p>
+      </div>
+
+      <!-- GRADE DE CARDS DE SERVIÇOS -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- CARD 1: ABERTURA DE EMPRESA -->
+        <div class="glass-card hover-lift rounded-2xl p-7 flex flex-col justify-between border border-slate-200">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-red-50 text-red-700 flex items-center justify-center mb-5 border border-red-100">
+              <i data-lucide="file-plus" class="w-6 h-6"></i>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 rounded text-[11px] font-bold bg-red-100 text-red-800 mb-2">
+              Honorários Grátis no Plano
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Abertura de Empresa Descomplicada</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Registramos seu CNPJ com rapidez na Junta Comercial, Receita e Prefeitura, selecionando os CNAEs exatos para pagar a menor alíquota inicial.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-100 mt-6">
+            <a href="#" class="dynamic-wa-link text-xs font-bold text-red-700 hover:text-red-900 flex items-center gap-1.5 group" data-wa-text="Olá Tiago Manso! Gostaria de abrir meu CNPJ e aproveitar a isenção de honorários.">
+              <span>Abrir meu CNPJ com Especialista</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 2: REDUÇÃO & PLANEJAMENTO TRIBUTÁRIO -->
+        <div class="glass-card hover-lift rounded-2xl p-7 flex flex-col justify-between border border-slate-200">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center mb-5">
+              <i data-lucide="shield-check" class="w-6 h-6 text-red-400"></i>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 rounded text-[11px] font-bold bg-slate-100 text-slate-800 mb-2">
+              Economia Legal Garantida
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Planejamento Tributário Consultivo</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Estudo minucioso entre Simples Nacional, Fator R, Lucro Presumido e Lucro Real para enquadrar sua operação onde você paga menos tributos.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-100 mt-6">
+            <a href="#" class="dynamic-wa-link text-xs font-bold text-red-700 hover:text-red-900 flex items-center gap-1.5 group" data-wa-text="Olá Tiago Manso! Quero um estudo de planejamento tributário para a minha empresa economizar impostos.">
+              <span>Solicitar Estudo Tributário</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 3: BPO FINANCEIRO -->
+        <div class="glass-card hover-lift rounded-2xl p-7 flex flex-col justify-between border border-slate-200">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-red-50 text-red-700 flex items-center justify-center mb-5 border border-red-100">
+              <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 rounded text-[11px] font-bold bg-blue-100 text-blue-800 mb-2">
+              Mais Tempo Para Vender
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">BPO Financeiro (Terceirização)</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Assumimos as rotinas operacionais: conciliação bancária, contas a pagar e a receber, emissão de notas fiscais e relatórios claros de fluxo de caixa.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-100 mt-6">
+            <a href="#" class="dynamic-wa-link text-xs font-bold text-red-700 hover:text-red-900 flex items-center gap-1.5 group" data-wa-text="Olá Tiago Manso! Gostaria de terceirizar o financeiro da minha empresa com o serviço de BPO.">
+              <span>Conhecer o BPO Financeiro</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 4: GESTÃO FISCAL, CONTÁBIL E FOLHA -->
+        <div class="glass-card hover-lift rounded-2xl p-7 flex flex-col justify-between border border-slate-200">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-slate-100 text-slate-900 flex items-center justify-center mb-5">
+              <i data-lucide="users" class="w-6 h-6"></i>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 mb-2">
+              Blindagem Trabalhista
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Departamento Pessoal & Folha</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Admissão, demissão, pró-labore dos sócios, férias, 13º e gestão do eSocial sem riscos de passivos trabalhistas para o seu CNPJ.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-100 mt-6">
+            <a href="#" class="dynamic-wa-link text-xs font-bold text-red-700 hover:text-red-900 flex items-center gap-1.5 group" data-wa-text="Olá Tiago Manso! Preciso de assessoria para folha de pagamento e departamento pessoal.">
+              <span>Falar Sobre Gestão de Pessoal</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 5: TRANSIÇÃO DE MEI PARA ME -->
+        <div class="glass-card hover-lift rounded-2xl p-7 flex flex-col justify-between border border-slate-200">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-red-50 text-red-700 flex items-center justify-center mb-5 border border-red-100">
+              <i data-lucide="trending-up" class="w-6 h-6"></i>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 rounded text-[11px] font-bold bg-purple-100 text-purple-800 mb-2">
+              Crescimento de Porte
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Desenquadramento de MEI para ME</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Estourou o teto do MEI ou precisa contratar mais funcionários? Realizamos a migração sem interrupção nas vendas ou travas no CNPJ.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-100 mt-6">
+            <a href="#" class="dynamic-wa-link text-xs font-bold text-red-700 hover:text-red-900 flex items-center gap-1.5 group" data-wa-text="Olá Tiago Manso! Preciso desenquadrar meu MEI e migrar com segurança para ME.">
+              <span>Migrar meu MEI para ME</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- CARD 6: REGULARIZAÇÃO DE DÍVIDAS & CERTIDÕES -->
+        <div class="glass-card hover-lift rounded-2xl p-7 flex flex-col justify-between border border-slate-200">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center mb-5">
+              <i data-lucide="file-check-2" class="w-6 h-6 text-red-400"></i>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-800 mb-2">
+              CNDs e Regularidade
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Regularização de CNPJ & Pendências</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Emissão de Certidões Negativas (CND), negociação de parcelamentos de débitos e resolução de bloqueios na Receita Federal e Prefeitura.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-slate-100 mt-6">
+            <a href="#" class="dynamic-wa-link text-xs font-bold text-red-700 hover:text-red-900 flex items-center gap-1.5 group" data-wa-text="Olá Tiago Manso! Preciso regularizar débitos fiscais e obter a Certidão Negativa do meu CNPJ.">
+              <span>Regularizar meu CNPJ Hoje</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO: COMO FUNCIONA A TROCA DE CONTADOR (ZERO ATRITO)
+       ========================================================================= -->
+  <section id="como-funciona" class="py-20 bg-[#F8FAFC]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center space-y-3 mb-16">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-red-100 text-red-800 border border-red-200">
+          <i data-lucide="repeat" class="w-3.5 h-3.5"></i> Transição Simples & Ágil
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Trocar de contador é muito mais fácil do que você pensa
+        </h2>
+        <p class="text-slate-600 max-w-2xl mx-auto text-base">
+          Você não precisa se preocupar com atritos ou burocracias. Nossa equipe assume todo o processo de transição sem interromper o seu negócio.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative max-w-5xl mx-auto">
+        
+        <!-- PASSO 1 -->
+        <div class="glass-card rounded-2xl p-7 relative border border-slate-200 shadow-sm text-center">
+          <div class="w-12 h-12 rounded-full bg-red-600 text-white font-extrabold text-lg flex items-center justify-center mx-auto mb-5 shadow-md">
+            1
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">Conversa no WhatsApp</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Você nos conta sobre a sua empresa e nós fazemos um diagnóstico gratuito para entender sua operação e indicar a melhor economia fiscal.
+          </p>
+        </div>
+
+        <!-- PASSO 2 -->
+        <div class="glass-card rounded-2xl p-7 relative border border-slate-200 shadow-sm text-center">
+          <div class="w-12 h-12 rounded-full bg-slate-900 text-white font-extrabold text-lg flex items-center justify-center mx-auto mb-5 shadow-md">
+            2
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">Transição 100% Cuidada</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Nós solicitamos os documentos e o histórico contábil diretamente ao seu contador anterior. Você não perde tempo com desgaste burocrático.
+          </p>
+        </div>
+
+        <!-- PASSO 3 -->
+        <div class="glass-card rounded-2xl p-7 relative border border-slate-200 shadow-sm text-center">
+          <div class="w-12 h-12 rounded-full bg-emerald-600 text-white font-extrabold text-lg flex items-center justify-center mx-auto mb-5 shadow-md">
+            3
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">Empresa Otimizada</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Iniciamos a assessoria com um contador dedicado no seu WhatsApp, blindando seu CNPJ e aplicando o planejamento para pagar menos impostos.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="text-center pt-10">
+        <a href="#" class="dynamic-wa-link inline-flex items-center gap-2 text-sm font-bold text-red-700 hover:text-red-800 bg-red-50 hover:bg-red-100 border border-red-200 px-6 py-3 rounded-xl transition" data-wa-text="Olá Tiago Manso! Gostaria de saber como funciona a transição da contabilidade da minha empresa.">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Tirar dúvidas sobre a migração no WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO: DEPOIMENTOS E PROVA SOCIAL
+       ========================================================================= -->
+  <section id="depoimentos" class="py-20 bg-slate-100/70 border-t border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center space-y-3 mb-16">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-red-100 text-red-800 border border-red-200">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-red-700"></i> Histórias Reais de Sucesso
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          O que dizem os empresários que confiam na Tiago Manso
+        </h2>
+        <p class="text-slate-600 max-w-2xl mx-auto text-base">
+          De prestadores de serviço a médias empresas, veja como nossa assessoria transforma tranquilidade em economia real.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        
+        <!-- DEPOIMENTO 1 -->
+        <div class="glass-card rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center text-amber-500 gap-1 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-sm text-slate-700 italic leading-relaxed mb-6">
+              "Na minha antiga contabilidade, eu esperava 3 dias para tirar uma dúvida sobre notas fiscais. Com a equipe do Tiago Manso, tenho resposta em minutos no WhatsApp e reduzimos quase 22% da nossa carga tributária com o enquadramento correto do Fator R."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-slate-800 text-white font-bold flex items-center justify-center text-sm">
+              RA
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Rodrigo Alcantara</h4>
+              <p class="text-xs text-slate-500">CEO na DevFlow Soluções em TI</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DEPOIMENTO 2 -->
+        <div class="glass-card rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center text-amber-500 gap-1 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-sm text-slate-700 italic leading-relaxed mb-6">
+              "Eu tinha muito receio de mudar de contador pela trabalheira. O Tiago cuidou de absolutamente tudo com o escritório anterior. Não precisei ligar para ninguém. O atendimento é impecável e não tem nenhuma cobrança surpresa no final do mês."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-red-700 text-white font-bold flex items-center justify-center text-sm">
+              CM
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Dra. Camila Marcondes</h4>
+              <p class="text-xs text-slate-500">Clínica Médica & Estética Integrada</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DEPOIMENTO 3 -->
+        <div class="glass-card rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center text-amber-500 gap-1 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            </div>
+            <p class="text-sm text-slate-700 italic leading-relaxed mb-6">
+              "Abriram minha empresa em menos de 48 horas e não me cobraram nenhum honorário na abertura por ter contratado a assessoria anual. Todo empresário deveria ter uma contabilidade parceira assim!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-slate-700 text-white font-bold flex items-center justify-center text-sm">
+              MS
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Marcelo Silveira</h4>
+              <p class="text-xs text-slate-500">Fundador da Império E-commerce</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO: GARANTIA, CONFORMIDADE E SEGURANÇA
+       ========================================================================= -->
+  <section class="py-12 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        
+        <div class="flex flex-col items-center space-y-2 p-3">
+          <div class="w-10 h-10 rounded-full bg-red-50 text-red-700 flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <span class="text-sm font-bold text-slate-900">CRC Regularizado</span>
+          <p class="text-xs text-slate-500">Conselho Regional de Contabilidade</p>
+        </div>
+
+        <div class="flex flex-col items-center space-y-2 p-3">
+          <div class="w-10 h-10 rounded-full bg-slate-100 text-slate-800 flex items-center justify-center">
+            <i data-lucide="lock" class="w-5 h-5"></i>
+          </div>
+          <span class="text-sm font-bold text-slate-900">LGPD Compliance</span>
+          <p class="text-xs text-slate-500">Sigilo absoluto dos seus dados fiscais</p>
+        </div>
+
+        <div class="flex flex-col items-center space-y-2 p-3">
+          <div class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center">
+            <i data-lucide="check-check" class="w-5 h-5"></i>
+          </div>
+          <span class="text-sm font-bold text-slate-900">Certificação ICP-Brasil</span>
+          <p class="text-xs text-slate-500">Assinaturas e protocolos 100% digitais</p>
+        </div>
+
+        <div class="flex flex-col items-center space-y-2 p-3">
+          <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-700 flex items-center justify-center">
+            <i data-lucide="headphones" class="w-5 h-5"></i>
+          </div>
+          <span class="text-sm font-bold text-slate-900">Suporte Humanizado</span>
+          <p class="text-xs text-slate-500">Contador real conversando com você</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO: FAQ - PERGUNTAS FREQUENTES (ACORDEÃO)
+       ========================================================================= -->
+  <section id="faq" class="py-20 bg-[#F8FAFC]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center space-y-3 mb-14">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-slate-200 text-slate-800 border border-slate-300">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5 text-red-600"></i> Esclareça Suas Dúvidas
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Perguntas Frequentes
+        </h2>
+        <p class="text-slate-600 text-base">
+          Tudo o que você precisa saber para tomar a melhor decisão para o seu CNPJ.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- PERGUNTA 1 -->
+        <div class="faq-item active bg-white rounded-xl border border-slate-200 transition">
+          <button class="faq-trigger w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-bold text-slate-900 text-base">
+            <span>É difícil ou demorado trocar de contador?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+            Não! Na verdade é muito simples. Pela legislação, o seu contador anterior é obrigado a repassar todos os livros e arquivos fiscais. A equipe da Tiago Manso cuida de todo o contato técnico com ele e faz a migração sem que você precise se preocupar com atritos.
+          </div>
+        </div>
+
+        <!-- PERGUNTA 2 -->
+        <div class="faq-item bg-white rounded-xl border border-slate-200 transition">
+          <button class="faq-trigger w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-bold text-slate-900 text-base">
+            <span>Como funciona a abertura de empresa com honorários grátis?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+            Ao contratar a nossa assessoria contábil mensal com plano anual, você não paga absolutamente nada pelos nossos honorários de abertura. Você arcará apenas com as taxas obrigatórias dos órgãos públicos (como Junta Comercial e Prefeitura da sua cidade).
+          </div>
+        </div>
+
+        <!-- PERGUNTA 3 -->
+        <div class="faq-item bg-white rounded-xl border border-slate-200 transition">
+          <button class="faq-trigger w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-bold text-slate-900 text-base">
+            <span>Como o planejamento tributário pode me fazer pagar menos impostos?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+            Muitas empresas estão enquadradas no regime errado ou não aproveitam incentivos como o Fator R no Simples Nacional (que pode reduzir alíquotas de 15,5% para 6%). Nós recalculamos sua folha e faturamento para aplicar o regime fiscal mais vantajoso 100% amparado pela legislação da Receita Federal.
+          </div>
+        </div>
+
+        <!-- PERGUNTA 4 -->
+        <div class="faq-item bg-white rounded-xl border border-slate-200 transition">
+          <button class="faq-trigger w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-bold text-slate-900 text-base">
+            <span>Vocês atendem empresas de qualquer estado ou cidade?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+            Sim! Nossa assessoria contábil é 100% digital e segura. Atendemos prestadores de serviços, e-commerces, profissionais liberais e comércios em todo o Brasil, com integração direta a sistemas emissores e comunicação ágil via WhatsApp.
+          </div>
+        </div>
+
+        <!-- PERGUNTA 5 -->
+        <div class="faq-item bg-white rounded-xl border border-slate-200 transition">
+          <button class="faq-trigger w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-bold text-slate-900 text-base">
+            <span>Terei suporte direto com um contador ou ficarei falando com robôs?</span>
+            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+          </button>
+          <div class="faq-content px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+            Aqui você tem atendimento humano de verdade. Você conversa diretamente com o Tiago Manso ou com seu contador responsável através do WhatsApp, telefone ou videochamada, com respostas rápidas e sem tickets demorados.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center pt-10">
+        <p class="text-sm text-slate-600 mb-3">Ainda tem alguma dúvida específica sobre o seu CNPJ?</p>
+        <a href="#" class="dynamic-wa-link inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-red-700 underline underline-offset-4" data-wa-text="Olá Tiago Manso! Tenho uma dúvida sobre contabilidade e gostaria de tirar no WhatsApp.">
+          <span>Conversar agora com um especialista</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       BANNER FINAL DE ALTA CONVERSÃO (CHAMADA FINAL)
+       ========================================================================= -->
+  <section class="py-16 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white relative overflow-hidden">
+    <!-- Efeito de luz vermelha de fundo -->
+    <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-red-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
+      
+      <div class="inline-flex items-center gap-2 bg-red-600/20 text-red-300 border border-red-500/30 px-3.5 py-1.5 rounded-full text-xs font-semibold">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-red-400"></i> Comece a economizar no próximo mês
+      </div>
+
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight max-w-3xl mx-auto leading-tight">
+        Pronto para ter uma contabilidade que <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-400 to-rose-300">gera lucro</span> em vez de dor de cabeça?
+      </h2>
+
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        Agende agora seu diagnóstico gratuito. Analisamos seus últimos 12 meses de impostos para encontrar oportunidades imediatas de economia.
+      </p>
+
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#" class="dynamic-wa-link btn-wa-glow text-white text-base font-extrabold px-8 py-4 rounded-xl flex items-center justify-center gap-3 shadow-xl w-full sm:w-auto" data-wa-text="Olá Tiago Manso! Quero fazer o diagnóstico gratuito e começar a economizar com minha contabilidade.">
+          <i data-lucide="message-circle" class="w-5 h-5 fill-white text-emerald-600"></i>
+          <span>Falar com o Tiago Manso no WhatsApp</span>
+        </a>
+
+        <button class="btn-open-modal bg-slate-800 hover:bg-slate-700 text-white text-base font-bold px-7 py-4 rounded-xl border border-slate-700 transition flex items-center justify-center gap-2 w-full sm:w-auto">
+          <i data-lucide="mail" class="w-5 h-5 text-red-400"></i>
+          <span>Solicitar Contato</span>
+        </button>
+      </div>
+
+      <p class="text-xs text-slate-400 pt-2">
+        🔒 Seus dados estão 100% seguros. Atendimento direto e sem compromisso.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       RODAPÉ INSTITUCIONAL
+       ========================================================================= -->
+  <footer class="bg-slate-950 text-slate-400 text-sm py-14 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800/80">
+        
+        <!-- COLUNA 1: IDENTIDADE -->
+        <div class="space-y-4 md:col-span-1">
+          <!-- Logo no rodapé com adaptação para contraste no escuro -->
+          <div class="flex items-center">
+            <svg class="h-10 w-auto" viewBox="0 0 320 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="14" y="6" width="38" height="38" rx="2" fill="#C81E1E" />
+              <text x="33" y="35" text-anchor="middle" fill="#FFFFFF" font-family="'Playfair Display', Georgia, serif" font-size="34" font-weight="900">T</text>
+              <text x="58" y="35" fill="#FFFFFF" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="700" letter-spacing="1">IAGO</text>
+              <rect x="0" y="44" width="40" height="40" rx="2" fill="#FFFFFF" />
+              <text x="20" y="74" text-anchor="middle" fill="#0F172A" font-family="'Playfair Display', Georgia, serif" font-size="32" font-weight="900">M</text>
+              <text x="46" y="73" fill="#FFFFFF" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="700" letter-spacing="1">ANSO</text>
+              <text x="49" y="89" fill="#94A3B8" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.19em">ASSESSORIA CONTÁBIL</text>
+            </svg>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Assessoria contábil consultiva, planejamento tributário estratégico e BPO financeiro com foco em rentabilidade empresarial.
+          </p>
+          <div class="text-xs text-slate-500 space-y-1">
+            <p><strong>Responsável Técnico:</strong> Tiago Manso</p>
+            <p><strong>Registro:</strong> CRC Ativo</p>
+          </div>
+        </div>
+
+        <!-- COLUNA 2: SERVIÇOS -->
+        <div class="space-y-3">
+          <h4 class="text-white text-xs font-bold uppercase tracking-wider">Serviços Estratégicos</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#servicos" class="hover:text-white transition">Abertura de Empresa Express</a></li>
+            <li><a href="#servicos" class="hover:text-white transition">Planejamento Tributário & Fator R</a></li>
+            <li><a href="#servicos" class="hover:text-white transition">BPO e Terceirização Financeira</a></li>
+            <li><a href="#servicos" class="hover:text-white transition">Desenquadramento MEI para ME</a></li>
+            <li><a href="#servicos" class="hover:text-white transition">Regularização Fiscal e CNDs</a></li>
+          </ul>
+        </div>
+
+        <!-- COLUNA 3: NAVEGAÇÃO -->
+        <div class="space-y-3">
+          <h4 class="text-white text-xs font-bold uppercase tracking-wider">Acesso Rápido</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#simulador" class="hover:text-white transition">Simulador de Economia Fiscal</a></li>
+            <li><a href="#diferenciais" class="hover:text-white transition">Por Que a Tiago Manso?</a></li>
+            <li><a href="#como-funciona" class="hover:text-white transition">Como Funciona a Migração</a></li>
+            <li><a href="#depoimentos" class="hover:text-white transition">Casos de Sucesso</a></li>
+            <li><a href="#faq" class="hover:text-white transition">Perguntas Frequentes</a></li>
+          </ul>
+        </div>
+
+        <!-- COLUNA 4: ATENDIMENTO -->
+        <div class="space-y-3">
+          <h4 class="text-white text-xs font-bold uppercase tracking-wider">Atendimento</h4>
+          <div class="space-y-2 text-xs">
+            <p class="flex items-center gap-2">
+              <i data-lucide="clock" class="w-4 h-4 text-red-500"></i>
+              <span>Segunda a Sexta: 08h às 18h</span>
+            </p>
+            <p class="flex items-center gap-2">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+              <span>Atendimento Direto no WhatsApp</span>
+            </p>
+            <div class="pt-2">
+              <a href="#" class="dynamic-wa-link inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3.5 py-2 rounded-lg text-xs transition" data-wa-text="Olá Tiago Manso! Gostaria de um atendimento para a minha empresa.">
+                <i data-lucide="message-square" class="w-3.5 h-3.5"></i> Iniciar Atendimento
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COPYRIGHT -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2026 Tiago Manso Assessoria Contábil. Todos os direitos reservados.</p>
+        <p>Desenvolvido com foco em alta conversão e excelência contábil.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       WIDGET FLUTUANTE DO WHATSAPP COM BALÃO DE NOTIFICAÇÃO
+       ========================================================================= -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    
+    <!-- BALÃO NOTIFICAÇÃO PERSUASIVA (aparece após 3.5s) -->
+    <div id="wa-floating-bubble" class="wa-widget-bubble mb-3 max-w-xs bg-white rounded-2xl p-4 shadow-2xl border border-slate-200 transition-all duration-300 opacity-0 pointer-events-none relative">
+      <button id="wa-bubble-close" class="absolute top-2 right-2 text-slate-400 hover:text-slate-600 p-1" aria-label="Fechar balão">
+        <i data-lucide="x" class="w-3.5 h-3.5"></i>
+      </button>
+      <div class="flex items-start gap-3">
+        <div class="w-8 h-8 rounded-full bg-slate-900 border border-red-600 flex items-center justify-center flex-shrink-0 text-white text-xs font-serif font-black">
+          TM
+        </div>
+        <div class="text-xs">
+          <p class="font-bold text-slate-900">Tiago Manso Contabilidade</p>
+          <p class="text-slate-600 mt-0.5 leading-snug">
+            👋 Olá! Precisa abrir sua empresa ou quer pagar menos impostos já este mês? Fale comigo no WhatsApp.
+          </p>
+          <a href="#" class="dynamic-wa-link inline-block mt-2 font-bold text-emerald-600 hover:text-emerald-700 underline text-[11px]" data-wa-text="Olá Tiago! Vi a mensagem no site e gostaria de tirar uma dúvida sobre contabilidade.">
+            Iniciar conversa agora →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTÃO PRINCIPAL FLUTUANTE COM EFEITO PULSE -->
+    <a href="#" class="dynamic-wa-link group relative flex items-center justify-center w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl transition duration-300 pulse-online" aria-label="Conversar no WhatsApp" data-wa-text="Olá Tiago Manso! Vim pelo site e gostaria de uma orientação contábil.">
+      <i data-lucide="message-circle" class="w-7 h-7 fill-white text-emerald-600"></i>
+      <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-red-600 border-2 border-white rounded-full"></span>
+    </a>
+
+  </div>
+
+  <!-- =========================================================================
+       MODAL DE CAPTURA RÁPIDA DE LEAD (DIAGNÓSTICO EXPRESS)
+       ========================================================================= -->
+  <div id="lead-modal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative animate-attention">
+      <button class="btn-close-modal absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-1">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="text-center space-y-2 mb-6">
+        <div class="w-12 h-12 rounded-full bg-red-100 text-red-700 flex items-center justify-center mx-auto mb-2">
+          <i data-lucide="file-spreadsheet" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900">Solicitar Diagnóstico Fiscal</h3>
+        <p class="text-xs text-slate-500">
+          Preencha para ser atendido pelo Tiago Manso no WhatsApp em até 15 minutos.
+        </p>
+      </div>
+
+      <form id="modal-lead-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Seu Nome / Responsável</label>
+          <input type="text" id="modal-lead-name" required placeholder="Ex: Carlos Eduardo" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600/30 focus:border-red-600 text-sm">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Nome da Empresa ou Ramo</label>
+          <input type="text" id="modal-lead-company" placeholder="Ex: DevSoft ou Clínica Médica" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600/30 focus:border-red-600 text-sm">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Principal Interesse</label>
+          <select id="modal-lead-interest" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600/30 focus:border-red-600 text-sm bg-white">
+            <option value="Trocar de Contador & Reduzir Impostos">Trocar de Contador & Reduzir Impostos</option>
+            <option value="Abrir Nova Empresa com Honorários Grátis">Abrir Nova Empresa (CNPJ Rápido)</option>
+            <option value="BPO Financeiro e Gestão de Fluxo">BPO Financeiro (Terceirização)</option>
+            <option value="Desenquadramento de MEI para ME">Migrar de MEI para ME</option>
+            <option value="Regularização de Débitos Fiscais">Regularização de Pendências</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-wa-glow w-full py-3.5 px-4 text-white font-bold rounded-xl text-sm flex items-center justify-center gap-2 shadow-lg transition">
+          <i data-lucide="message-circle" class="w-4 h-4 fill-white"></i>
+          <span>Receber Atendimento no WhatsApp</span>
+        </button>
+      </form>
+
+      <div class="flex items-center justify-center gap-2 text-[11px] text-slate-400 mt-4">
+        <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-600"></i>
+        <span>Sem spam. Atendimento direto e confidencial.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inicialização dos ícones Lucide -->
+  <script>
+    lucide.createIcons();
+  </script>
+
+  <!-- Script de Interatividade e Funil de Vendas -->
+  <script src="js/main.js"></script>
+</body>
+</html>

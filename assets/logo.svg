@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" fill="none" class="w-auto h-12">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap');
+      .serif-title { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; }
+      .sans-sub { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; letter-spacing: 0.18em; font-size: 10px; font-weight: 600; }
+    </style>
+  </defs>
+
+  <!-- Red square with T -->
+  <rect x="10" y="10" width="38" height="38" rx="2" fill="#C81E1E" />
+  <text x="29" y="38" text-anchor="middle" fill="#FFFFFF" class="serif-title" font-size="34" font-weight="900">T</text>
+
+  <!-- IAGO text in dark charcoal/navy -->
+  <text x="54" y="38" fill="#0F172A" class="serif-title" font-size="28" letter-spacing="1">IAGO</text>
+
+  <!-- White/Light gray square with dark border and M -->
+  <rect x="0" y="44" width="40" height="40" rx="2" fill="#FFFFFF" stroke="#0F172A" stroke-width="2.5" />
+  <text x="20" y="74" text-anchor="middle" fill="#0F172A" class="serif-title" font-size="33" font-weight="900">M</text>
+
+  <!-- ANSO text in dark charcoal/navy -->
+  <text x="46" y="73" fill="#0F172A" class="serif-title" font-size="28" letter-spacing="1">ANSO</text>
+
+  <!-- Subtitle: Assessoria Contábil -->
+  <text x="50" y="88" fill="#475569" class="sans-sub" text-transform="uppercase">ASSESSORIA CONTÁBIL</text>
+</svg>

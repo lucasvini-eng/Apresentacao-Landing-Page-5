@@ -1,0 +1,223 @@
+/* ==========================================================================
+   Tiago Manso Assessoria Contábil - Custom Design System & CRO Animations
+   Paleta: Fundo Claro (Off-white / Slate suave), Vermelho Manso (#c81e1e),
+           Grafite Corporativo (#0f172a) e Verde WhatsApp (#25d366)
+   ========================================================================== */
+
+:root {
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-subtle: #f1f5f9;
+  --color-primary: #c81e1e;
+  --color-primary-hover: #b91c1c;
+  --color-primary-dark: #991b1b;
+  --color-primary-soft: #fef2f2;
+  --color-dark: #0f172a;
+  --color-dark-surface: #1e293b;
+  --color-text-main: #1e293b;
+  --color-text-muted: #64748b;
+  --color-wa: #25d366;
+  --color-wa-hover: #20ba5a;
+  --shadow-soft: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -2px rgba(15, 23, 42, 0.03);
+  --shadow-elevated: 0 20px 35px -8px rgba(15, 23, 42, 0.08), 0 8px 16px -6px rgba(15, 23, 42, 0.04);
+  --shadow-primary: 0 10px 25px -5px rgba(200, 30, 30, 0.35);
+  --shadow-wa: 0 10px 25px -5px rgba(37, 211, 102, 0.4);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--color-text-main);
+}
+
+/* Tipografia Serif para marcas de autoridade */
+.font-brand-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Background suave com gradiente sutil para não ser branco puro */
+.bg-warm-light {
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.bg-pattern-grid {
+  background-color: #f8fafc;
+  background-image: radial-gradient(#cbd5e1 0.75px, transparent 0.75px);
+  background-size: 24px 24px;
+}
+
+/* Glassmorphism para header e cartões */
+.glass-header {
+  background: rgba(248, 250, 252, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+/* Efeito de elevação nos cartões interativos */
+.hover-lift {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-elevated);
+  border-color: rgba(200, 30, 30, 0.3);
+}
+
+/* Botão de Destaque Vermelho Manso */
+.btn-primary-glow {
+  background: linear-gradient(135deg, #c81e1e 0%, #a81919 100%);
+  box-shadow: var(--shadow-primary);
+  transition: all 0.25s ease;
+}
+
+.btn-primary-glow:hover {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  box-shadow: 0 14px 28px -4px rgba(200, 30, 30, 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-primary-glow:active {
+  transform: translateY(0);
+}
+
+/* Botão WhatsApp de Alta Conversão */
+.btn-wa-glow {
+  background: linear-gradient(135deg, #25d366 0%, #1da851 100%);
+  box-shadow: var(--shadow-wa);
+  transition: all 0.25s ease;
+}
+
+.btn-wa-glow:hover {
+  background: linear-gradient(135deg, #2ce670 0%, #20ba5a 100%);
+  box-shadow: 0 14px 28px -4px rgba(37, 211, 102, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Efeito Pulso para Status Online e WhatsApp */
+@keyframes status-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.pulse-online {
+  animation: status-pulse 2s infinite cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+@keyframes attention-ping {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+.animate-attention {
+  animation: attention-ping 3s ease-in-out infinite;
+}
+
+/* Opções interativas do Funil (Pills/Radio Cards) */
+.quiz-option {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1.5px solid #e2e8f0;
+  background-color: #ffffff;
+}
+
+.quiz-option:hover {
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+  transform: translateY(-1px);
+}
+
+.quiz-option.selected {
+  border-color: #c81e1e;
+  background-color: #fff5f5;
+  box-shadow: 0 4px 12px -2px rgba(200, 30, 30, 0.15);
+}
+
+.quiz-option.selected .quiz-indicator {
+  background-color: #c81e1e;
+  border-color: #c81e1e;
+}
+
+.quiz-option.selected .quiz-indicator-inner {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Acordeão de FAQ */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1), opacity 0.25s ease;
+  opacity: 0;
+}
+
+.faq-item.active .faq-content {
+  max-height: 500px;
+  opacity: 1;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  color: #c81e1e;
+}
+
+.faq-item.active {
+  border-color: rgba(200, 30, 30, 0.3);
+  background-color: #ffffff;
+}
+
+/* Balão do WhatsApp Flutuante com chamada para ação */
+.wa-widget-bubble {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Scrollbar sutil e moderna */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
